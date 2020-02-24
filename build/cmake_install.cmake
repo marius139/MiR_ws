@@ -127,6 +127,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ros/MiR_ws/build/gtest/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/mir_robot/cmake_install.cmake")
+  include("/home/ros/MiR_ws/build/realsense-ros/realsense2_description/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/mir_msgs/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/sdc21x0/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/project_images/cmake_install.cmake")
@@ -137,6 +138,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ros/MiR_ws/build/simple_navigation_goals/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/mir_driver/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/mir_dwb_critics/cmake_install.cmake")
+  include("/home/ros/MiR_ws/build/realsense-ros/realsense2_camera/cmake_install.cmake")
 
 endif()
 
