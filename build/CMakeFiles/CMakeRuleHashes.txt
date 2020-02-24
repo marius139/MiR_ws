@@ -59,6 +59,8 @@ a16e9c5e322c420583a4b2b25a1813eb /home/ros/MiR_ws/devel/include/mir_msgs/Serial.
 ebd0ab744281e1e6fbdf0ceb2005e9fb /home/ros/MiR_ws/devel/include/mir_msgs/WebPath.h
 6dea1c6296db5f68bf94e46cd52f80cd /home/ros/MiR_ws/devel/include/mir_msgs/WorldMap.h
 b46a879c4104b8a54a01303294c9e90f /home/ros/MiR_ws/devel/include/mir_msgs/WorldModel.h
+0be92a575aaf853dd6d4b4656fe28162 /home/ros/MiR_ws/devel/include/realsense2_camera/Extrinsics.h
+382f88daac2f912b0a5a201f79f9c0de /home/ros/MiR_ws/devel/include/realsense2_camera/IMUInfo.h
 80c59aca9bd1daf5022f5c5c7cd066e6 /home/ros/MiR_ws/devel/include/sdc21x0/Encoders.h
 74ea17a11c4cf1b3b521bad6aadbff92 /home/ros/MiR_ws/devel/include/sdc21x0/Flags.h
 aa6fe251dacd5ec67e87d2407dbde8a9 /home/ros/MiR_ws/devel/include/sdc21x0/MotorCurrents.h
@@ -125,6 +127,9 @@ b982ba6aabba26ce18e1a7b2299a580a /home/ros/MiR_ws/devel/lib/python2.7/dist-packa
 b06b907f09fad6a90bbf46531046ed93 /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/mir_msgs/msg/_WorldMap.py
 59e585fc6d43e2b16165cd309d15e44e /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/mir_msgs/msg/_WorldModel.py
 7aae74fe0d44fc0f063a8211664dbdcd /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/mir_msgs/msg/__init__.py
+d815a4011e970f072ed28b162bdd30cb /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py
+228bad6ae39b6e53e85257b3e2bc3f42 /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py
+86e102f20a9e1687166c72bb630a87a9 /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/__init__.py
 8519dd54818053d5dde1c3e806f51df8 /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/sdc21x0/msg/_Encoders.py
 1fee2e1a98ce0950799a82dfd140bba3 /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/sdc21x0/msg/_MotorCurrents.py
 34fdd436972ceeca7711a862dfcd5aa9 /home/ros/MiR_ws/devel/lib/python2.7/dist-packages/sdc21x0/msg/_StampedEncoders.py
@@ -191,6 +196,8 @@ b7ce8d4bd4c85fe17b8a1200257fa465 /home/ros/MiR_ws/devel/share/common-lisp/ros/mi
 65ea7d8d67121193a8e6c72dac8eee6d /home/ros/MiR_ws/devel/share/common-lisp/ros/mir_msgs/msg/WebPath.lisp
 6b73173cbf6e8173e158c8ca22d827e7 /home/ros/MiR_ws/devel/share/common-lisp/ros/mir_msgs/msg/WorldMap.lisp
 c128a2e6c538f2f15c2449bbf9191a75 /home/ros/MiR_ws/devel/share/common-lisp/ros/mir_msgs/msg/WorldModel.lisp
+6f36e4cf19bb7cb9b3bb04673eae3fe9 /home/ros/MiR_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp
+cee3b3071381e3f25194d780cdf42d5b /home/ros/MiR_ws/devel/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp
 37d161872008026081a0c2e37084e9f5 /home/ros/MiR_ws/devel/share/common-lisp/ros/sdc21x0/msg/Encoders.lisp
 188de7e68e1848bdb7d69403ed39e8c8 /home/ros/MiR_ws/devel/share/common-lisp/ros/sdc21x0/msg/MotorCurrents.lisp
 6b0023f76e786c607e5f2c1310e110be /home/ros/MiR_ws/devel/share/common-lisp/ros/sdc21x0/msg/StampedEncoders.lisp
@@ -255,6 +262,8 @@ cafff7e05284c51708a25339b4a7ecfc /home/ros/MiR_ws/devel/share/gennodejs/ros/mir_
 2fce738a94671b4fad3078383f341b06 /home/ros/MiR_ws/devel/share/gennodejs/ros/mir_msgs/msg/WebPath.js
 59042dfbe11e4e98f468a86ccc6b0b51 /home/ros/MiR_ws/devel/share/gennodejs/ros/mir_msgs/msg/WorldMap.js
 dea7731737d7f9bcd0409da0180d1c94 /home/ros/MiR_ws/devel/share/gennodejs/ros/mir_msgs/msg/WorldModel.js
+7aad123200265a809344b5cdb4692035 /home/ros/MiR_ws/devel/share/gennodejs/ros/realsense2_camera/msg/Extrinsics.js
+71308804c76272fc39063e3dce4f7b12 /home/ros/MiR_ws/devel/share/gennodejs/ros/realsense2_camera/msg/IMUInfo.js
 089e077bf07c5496db78dccee57138e4 /home/ros/MiR_ws/devel/share/gennodejs/ros/sdc21x0/msg/Encoders.js
 9bca7477d4a1ea0a148ca57449d291d1 /home/ros/MiR_ws/devel/share/gennodejs/ros/sdc21x0/msg/MotorCurrents.js
 5815a2331f691bce7d5961692c352310 /home/ros/MiR_ws/devel/share/gennodejs/ros/sdc21x0/msg/StampedEncoders.js
@@ -321,6 +330,9 @@ ce6e1424dfd03f36b65666f89d907415 /home/ros/MiR_ws/devel/share/roseus/ros/mir_msg
 9454b1a51333523ee7ce2b201f1c69bb /home/ros/MiR_ws/devel/share/roseus/ros/mir_msgs/msg/WebPath.l
 297a9b59680ffe3770fbe940edc6ff86 /home/ros/MiR_ws/devel/share/roseus/ros/mir_msgs/msg/WorldMap.l
 55c333f8bc82f9169e1ea3551f1d1aac /home/ros/MiR_ws/devel/share/roseus/ros/mir_msgs/msg/WorldModel.l
+e6e32624d5a4244c4580f7ea5e8a1193 /home/ros/MiR_ws/devel/share/roseus/ros/realsense2_camera/manifest.l
+85d75773dc25e3816b798cf7754525b8 /home/ros/MiR_ws/devel/share/roseus/ros/realsense2_camera/msg/Extrinsics.l
+113d33304fb0136b98fbdbde5996c6e4 /home/ros/MiR_ws/devel/share/roseus/ros/realsense2_camera/msg/IMUInfo.l
 8e64659306e56cb6fb3f74233a844114 /home/ros/MiR_ws/devel/share/roseus/ros/sdc21x0/manifest.l
 3f9a8abe2296348a800a2182ed73bf98 /home/ros/MiR_ws/devel/share/roseus/ros/sdc21x0/msg/Encoders.l
 04e2b16bfeb49e4f58c7926a184b4485 /home/ros/MiR_ws/devel/share/roseus/ros/sdc21x0/msg/MotorCurrents.l
@@ -418,3 +430,17 @@ bbd9d175f52d3f8505815820176130c0 mir_robot/sdc21x0/CMakeFiles/_sdc21x0_generate_
 374f7e3177c71aad779a8b0e9c682956 mir_robot/sdc21x0/CMakeFiles/sdc21x0_generate_messages_lisp
 374f7e3177c71aad779a8b0e9c682956 mir_robot/sdc21x0/CMakeFiles/sdc21x0_generate_messages_nodejs
 374f7e3177c71aad779a8b0e9c682956 mir_robot/sdc21x0/CMakeFiles/sdc21x0_generate_messages_py
+fb082ec3e1c7566299a005d4cd4ca20e qtros/include/qtros/moc_main_window.cxx
+3983cf9ca04007e3c4c712f1213c1d91 qtros/include/qtros/moc_main_windowOLD.cxx
+c0ef0a3ed509fde1e29afae812d16915 qtros/include/qtros/moc_qnode.cxx
+4a5617f791d08b7b4d9204683ea7ebc5 qtros/include/qtros/moc_qnodeOLD.cxx
+b79e2c9f02ac60b3f0064500f8620b85 qtros/qrc_images.cxx
+47ccdcbc4f81cebe6acbc5c0c775a3d3 qtros/ui_main_window.h
+4bb92056f68cb4e71249339c46a61a94 qtros/ui_main_windowOLD.h
+5f6d3d0596efc9d4dc70e20b60df6e28 realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_Extrinsics
+5aba2b328e2f43bc357f0daf4245d228 realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_IMUInfo
+b70e1aeafb90658f36e0955e68997ff3 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp
+b70e1aeafb90658f36e0955e68997ff3 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus
+b70e1aeafb90658f36e0955e68997ff3 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp
+b70e1aeafb90658f36e0955e68997ff3 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs
+b70e1aeafb90658f36e0955e68997ff3 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py
