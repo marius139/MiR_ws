@@ -999,7 +999,7 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libnav_grid_iterators.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -1095,10 +1095,16 @@ nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
 //Value Computed by CMake
-projectImages_BINARY_DIR:STATIC=/home/ros/MiR_ws/build/projectImages
+projectImages_BINARY_DIR:STATIC=/home/ros/MiR_ws/build/project_images
 
 //Value Computed by CMake
-projectImages_SOURCE_DIR:STATIC=/home/ros/MiR_ws/src/projectImages
+projectImages_SOURCE_DIR:STATIC=/home/ros/MiR_ws/src/project_images
+
+//Value Computed by CMake
+project_images_BINARY_DIR:STATIC=/home/ros/MiR_ws/build/project_images
+
+//Value Computed by CMake
+project_images_SOURCE_DIR:STATIC=/home/ros/MiR_ws/src/project_images
 
 //The directory containing a CMake configuration file for qt_build.
 qt_build_DIR:PATH=/opt/ros/kinetic/share/qt_build/cmake
@@ -1316,7 +1322,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

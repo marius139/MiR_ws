@@ -1,8 +1,8 @@
 <launch>
 
 	<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>
-	<node pkg="projectImages" type="projectImages" name="projectImage"/>
-	<node pkg="simple_navigation_goals" type="simple_navigation_goals" name="simple_navigation_goals"/>
+	<node pkg="project_images" type="project_images" name="project_images"/>
+	<node pkg="simple_navigation_goals" type="simple_navigation_goals" name="simple_navigation_goals" output="screen"/>
 	
 	
   <arg name="serial_no"           default=""/>

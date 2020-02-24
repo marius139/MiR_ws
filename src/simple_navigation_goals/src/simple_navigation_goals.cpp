@@ -402,7 +402,7 @@ int main(int argc, char** argv){
     //Publisher for teleporting
     ros::Publisher pubPose = nh1.advertise<geometry_msgs::PoseWithCovarianceStamped> ("/initialpose", 1);
 
-    MoveBaseClient ac("move_base",true);
+    //MoveBaseClient ac("move_base",true);
 /*
     while(!ac.waitForServer(ros::Duration(3.0))){
       ROS_INFO("Waiting for the move_base action server to come up");
@@ -412,7 +412,7 @@ int main(int argc, char** argv){
     ac.cancelAllGoals();
 */
 
-    elevatorDoor(1);
+    //elevatorDoor(1);
 
     //door 1 = right door
     //door 2 = left door

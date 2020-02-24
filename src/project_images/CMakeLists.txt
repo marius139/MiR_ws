@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(projectImages)
+project(project_images)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -103,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES projectImages
+#  LIBRARIES project_images
 #  CATKIN_DEPENDS roscpp std_msgs
 #  DEPENDS system_lib
 )
@@ -121,7 +121,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/projectImages.cpp
+#   src/${PROJECT_NAME}/project_images.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -134,9 +134,9 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 
 find_package(OpenCV 3 REQUIRED)
-add_executable(projectImages src/projectImages.cpp)
-target_link_libraries(projectImages ${catkin_LIBRARIES})
-target_link_libraries(projectImages ${OpenCV_LIBS})
+add_executable(project_images src/project_images.cpp)
+target_link_libraries(project_images ${catkin_LIBRARIES})
+target_link_libraries(project_images ${OpenCV_LIBS})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -200,7 +200,7 @@ target_link_libraries(projectImages ${OpenCV_LIBS})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_projectImages.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_project_images.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
