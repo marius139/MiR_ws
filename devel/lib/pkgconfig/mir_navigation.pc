@@ -1,0 +1,8 @@
+prefix=/home/ros/MiR_ws/devel
+
+Name: mir_navigation
+Description: Description of mir_navigation
+Version: 1.0.4
+Cflags: 
+Libs: -L/home/ros/MiR_ws/devel/lib 
+Requires: 

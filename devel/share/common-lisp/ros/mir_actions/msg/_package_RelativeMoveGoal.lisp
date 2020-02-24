@@ -1,0 +1,24 @@
+(cl:in-package mir_actions-msg)
+(cl:export '(TARGET_POSE-VAL
+          TARGET_POSE
+          YAW-VAL
+          YAW
+          COLLISION_DETECTION-VAL
+          COLLISION_DETECTION
+          DISABLE_COLLISION_CHECK_DIST-VAL
+          DISABLE_COLLISION_CHECK_DIST
+          MAX_LINEAR_SPEED-VAL
+          MAX_LINEAR_SPEED
+          MAX_ROTATIONAL_SPEED-VAL
+          MAX_ROTATIONAL_SPEED
+          PID_DIST_OFFSET-VAL
+          PID_DIST_OFFSET
+          TARGET_OFFSET-VAL
+          TARGET_OFFSET
+          ONLY_COLLISION_DETECTION-VAL
+          ONLY_COLLISION_DETECTION
+          TIMEOUT-VAL
+          TIMEOUT
+          SAME_GOAL-VAL
+          SAME_GOAL
+))

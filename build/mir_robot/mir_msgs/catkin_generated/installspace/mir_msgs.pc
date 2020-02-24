@@ -1,0 +1,8 @@
+prefix=/home/ros/MiR_ws/install
+
+Name: mir_msgs
+Description: Description of mir_msgs
+Version: 1.0.4
+Cflags: -I/home/ros/MiR_ws/install/include
+Libs: -L/home/ros/MiR_ws/install/lib 
+Requires: message_runtime geometry_msgs
