@@ -19,7 +19,7 @@ double curXpose;
 double curYpose;
 double curAngle;
 
-//starting image being displayed
+//starting image to be displayed
 const int startImg = 1;
 //Current image being displayed
 int curImg = startImg;
