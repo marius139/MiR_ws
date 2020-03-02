@@ -914,7 +914,7 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
 
 //The directory containing a CMake configuration file for ddynamic_reconfigure.
-ddynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/ddynamic_reconfigure/cmake
+ddynamic_reconfigure_DIR:PATH=ddynamic_reconfigure_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
@@ -999,7 +999,7 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake

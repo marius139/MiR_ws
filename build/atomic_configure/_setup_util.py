@@ -270,7 +270,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/home/ros/Desktop/qt5000/devel;/opt/ros/kinetic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/ros/catkin_ws_mir/devel;/opt/ros/kinetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []
