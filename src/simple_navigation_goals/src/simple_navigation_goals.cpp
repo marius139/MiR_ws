@@ -60,7 +60,7 @@ void imageCb(const sensor_msgs::ImageConstPtr msg){
   }
 
 }
-//Depth image caalback
+//Depth image caalba vck
 void depthCb(const sensor_msgs::ImageConstPtr msg){
 
   try
@@ -386,7 +386,7 @@ int main(int argc, char** argv){
 
     ros::NodeHandle nh1;
 
-    //Subscribe to camera rgb image
+    //Subscribe to camera rgb image zenzygt
     ros::Subscriber image_sub_ = nh1.subscribe("/camera/color/image_raw", 1,imageCb);
     //Subscribe to camera depth
     ros::Subscriber depth_sub_ = nh1.subscribe("/camera/depth/image_rect_raw", 1,depthCb);
