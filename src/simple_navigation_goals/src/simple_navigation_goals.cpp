@@ -14,7 +14,6 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-
 //arduino
 #include <std_msgs/String.h>
 #include <std_msgs/Empty.h>
@@ -32,7 +31,6 @@ double curYpose;
 std::vector<geometry_msgs::PoseWithCovarianceStamped> previousPoints;
 
 
-
 double pose(int flag);
 void onPoseSet(double x, double y, double theta);
 typedef boost::array<double, 36> array;
@@ -43,6 +41,10 @@ int curFloor = 0;
 int AGBR = 0;
 int door = 0;
 int maxSize = 50;
+int firstTime = 0;
+
+//Declare functions
+void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, ros::Publisher pubSpeak,  MoveBaseClient& ac);
 
 
 //Delay for a set time in seconds
@@ -128,25 +130,39 @@ void CVCallback(const std_msgs::Int8 msg){
   AGBR = msg.data; //1 = human, 0 = object (AGBR = Anne-Grethe Bjarup Riis)
 }
 
+
+//TRACE BACK xx meters
 void traceBack(){
+  firstTime = 0; //Reset variable
+
 
 }
 
+
 //RECOVERY BEHAVIOUR
-void recoveryBehaviour(){
+void recoveryBehaviour(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
   if(AGBR == 1){
+    ROS_INFO("Object is a human. Telling the person to move.");
     sendToSpeaker(2, pubSpeak);
-    ros::Time begin = ros::Time::now();
-    while(ros::Time::now() - begin <= 5.0){
+    double begin = ros::Time::now().toSec();
+
+    //Wait 5 sec for the person to move
+    while(ros::Time::now().toSec() - begin <= 5.0){
       ros::spinOnce();
     }
-
+    if(firstTime = 0){
+      firstTime++;
+      ac.cancelAllGoals();
+      moveToPoint(x, y, rot, button, pubArd, pubSpeak, ac);
+    }
   }
+  ROS_INFO("Initialising Trace Back method.");
   traceBack();
 }
 
+
 //MOVETOPOINT FUNCTION
-void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, MoveBaseClient& ac){
+void moveToPoint(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
   //MoveBaseClient ac("move_base",true);
   //while(!ac.waitForServer(ros::Duration(3.0))){
   //ROS_INFO("Waiting for the move_base action server to come up");
@@ -160,7 +176,6 @@ void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1
   start.target_pose.pose.position.x = x;
   start.target_pose.pose.position.y = y;
 
-
   tf::Quaternion quat;
   quat.setRPY(0.0, 0.0, rot);
   tf::quaternionTFToMsg(quat, start.target_pose.pose.orientation);
@@ -173,7 +188,7 @@ void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1
 
     if (ac.getState() == actionlib::SimpleClientGoalState::ABORTED){
       ROS_INFO("The path is blocked, initialising recovery behaviour.");
-      recoveryBehaviour();
+      recoveryBehaviour(x, y, rot, button, pubArd, pubSpeak, ac);
 
       /*    OLD BRUTE FORCE BUTTONS
       switch (button) {
@@ -202,10 +217,11 @@ void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1
 //ROS_INFO("Action state: %s", state.toString().c_str() );
 //ac.stopTrackingGoal();
 //ac.cancelAllGoals();
-
+firstTime = 0; //Reset variable
 ROS_INFO("Hooray, the base moved to position");
-
 }
+
+
 //TELEPORT THE ROBOT ON INTERNAL MAP FUNCTION
 void onPoseSet(double x, double y, double rot, ros::Publisher pub2){
   ros::Rate loop_rate(1);
@@ -291,6 +307,8 @@ void waitForGo(){
   }
   qtGo==1;
 }
+
+
 //Request current floor and wait for the floor to be reached
 void waitForFloor(int f, ros::Publisher pub1){
 
@@ -429,7 +447,7 @@ int main(int argc, char** argv){
   //Subscribe to feedback from arduino
   ros::Subscriber arduino_sub = nh1.subscribe("fromArduino", 64, ARDCallback);
   //Subscribe to computer vision topic
-  ros::Subscriber humanRecognition_sub = nh1.subscribe("CVtopic", 64, ARDcallback);
+  ros::Subscriber humanRecognition_sub = nh1.subscribe("CVtopic", 1, CVCallback);
   //Subscribe to the mir platform current position in the map
   ros::Subscriber sub_ = nh1.subscribe<geometry_msgs::PoseWithCovarianceStamped>("/amcl_pose", 10, moveBaseCallback);
   //Publisher for the arduino
