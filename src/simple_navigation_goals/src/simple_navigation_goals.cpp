@@ -6,6 +6,10 @@
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <vector>
 
+#include <boost/thread/condition.hpp>
+#include <boost/thread/mutex.hpp>
+#include <boost/scoped_ptr.hpp>
+
 //Libraries for RealSense
 #include <opencv2/core.hpp>
 #include <image_transport/image_transport.h>
@@ -20,6 +24,9 @@
 #include <std_msgs/Int8.h>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
+//typedef boost::function<void (const SimpleClientGoalState& state,  const ResultConstPtr& result) > SimpleDoneCallback;
+//typedef boost::function<void () > SimpleActiveCallback;
+//typedef boost::function <void (const FeedbackConstPtr& feedback) > SimpleFeedbackCallback;
 
 cv_bridge::CvImagePtr cv_ptr;
 cv_bridge::CvImagePtr cv_ptrDep;
@@ -47,30 +54,7 @@ int firstTime = 0;
 void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, ros::Publisher pubSpeak,  MoveBaseClient& ac);
 
 
-//Delay for a set time in seconds
-void delaying(float t){
-  ros::Time tidDelay = ros::Time::now()+ros::Duration(t);
-  while(ros::Time::now()<tidDelay){
-  }
-}
-
-
-//Send Command to arduino
-void sendToArduino(int x, ros::Publisher pubArd){
-  std_msgs::Int8 arduinoMessage;
-  arduinoMessage.data = x;
-  pubArd.publish(arduinoMessage);
-}
-
-
-//Send command to speaker
-void sendToSpeaker(int x, ros::Publisher pubSpeak){
-  std_msgs::Int8 speakMessage;
-  speakMessage.data = x;
-  pubSpeak.publish(speakMessage);
-}
-
-
+//CALLBACK FUNCTIONS ----------------------------------------------------------
 //CALLBACK - RGB image
 void imageCallback(const sensor_msgs::ImageConstPtr msg){
   try
@@ -130,6 +114,52 @@ void CVCallback(const std_msgs::Int8 msg){
   AGBR = msg.data; //1 = human, 0 = object (AGBR = Anne-Grethe Bjarup Riis)
 }
 
+/*
+// CALLBACK - Called once when the goal completes (ac.sendGoal)
+void doneCb(const actionlib::SimpleClientGoalState& state, const FibonacciResultConstPtr& result){
+  ROS_INFO("Finished in state [%s]", state.toString().c_str());
+  ROS_INFO("Answer: %i", result->sequence.back());
+  ros::shutdown();
+}
+
+*/
+// CALLBACK - Called once when the goal becomes active (ac.sendGoal)
+void activeCb(){
+  ROS_INFO("Goal just went active");
+}
+
+
+// CALLBACK - Called every time feedback is received for the goal (ac.sendGoal)
+void feedbackCb(const MoveBaseClient::SimpleFeedbackCallback& feedback){
+  //ROS_INFO("Got Feedback of length %lu", feedback->sequence.size());
+}
+
+
+
+//FUNCTIONS -------------------------------------------------------------------
+//Delay for a set time in seconds
+void delaying(float t){
+  ros::Time tidDelay = ros::Time::now()+ros::Duration(t);
+  while(ros::Time::now()<tidDelay){
+  }
+}
+
+
+//Send Command to arduino
+void sendToArduino(int x, ros::Publisher pubArd){
+  std_msgs::Int8 arduinoMessage;
+  arduinoMessage.data = x;
+  pubArd.publish(arduinoMessage);
+}
+
+
+//Send command to speaker
+void sendToSpeaker(int x, ros::Publisher pubSpeak){
+  std_msgs::Int8 speakMessage;
+  speakMessage.data = x;
+  pubSpeak.publish(speakMessage);
+}
+
 
 //TRACE BACK xx meters
 void traceBack(){
@@ -144,10 +174,10 @@ void recoveryBehaviour(double x, double y, double rot, int button, ros::Publishe
   if(AGBR == 1){
     ROS_INFO("Object is a human. Telling the person to move.");
     sendToSpeaker(2, pubSpeak);
-    double begin = ros::Time::now().toSec();
+    double beginRecoverTimer = ros::Time::now().toSec();
 
     //Wait 5 sec for the person to move
-    while(ros::Time::now().toSec() - begin <= 5.0){
+    while(ros::Time::now().toSec() - beginRecoverTimer <= 5.0){
       ros::spinOnce();
     }
     if(firstTime = 0){
@@ -181,13 +211,13 @@ void moveToPoint(double x, double y, double rot, int button, ros::Publisher pubA
   tf::quaternionTFToMsg(quat, start.target_pose.pose.orientation);
   ros::Rate rate(1);
 
-  ac.sendGoal(start);
+  ac.sendGoal(start, NULL, &activeCb, &feedbackCb);
+  //ac.sendGoal(start, MoveBaseClient::SimpleFeedbackCallback());
   ac.waitForResult();
 
   while(ac.getState() != actionlib::SimpleClientGoalState::SUCCEEDED ){
-
     if (ac.getState() == actionlib::SimpleClientGoalState::ABORTED){
-      ROS_INFO("The path is blocked, initialising recovery behaviour.");
+      ROS_INFO("ERROR: The path is blocked, initialising recovery behaviour.");
       recoveryBehaviour(x, y, rot, button, pubArd, pubSpeak, ac);
 
       /*    OLD BRUTE FORCE BUTTONS
@@ -429,7 +459,7 @@ void calArd(int x, ros::Publisher pub1){
 }
 
 
-//MAIN -------------------------------------------------------
+//MAIN ------------------------------------------------------------------------
 int main(int argc, char** argv){
   //Initialize ros
   ros::init(argc, argv, "simple_navigation_goals");
@@ -457,7 +487,7 @@ int main(int argc, char** argv){
 
   ros::Publisher pubSpeak = nh1.advertise<std_msgs::Int8> ("/speaker", 1);
 
-  //MoveBaseClient ac("move_base",true);
+  MoveBaseClient ac("move_base",true);
   /*
   while(!ac.waitForServer(ros::Duration(3.0))){
   ROS_INFO("Waiting for the move_base action server to come up");
