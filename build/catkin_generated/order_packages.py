@@ -2,4 +2,4 @@
 source_root_dir = "/home/ros/MiR_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/ros/Desktop/qt5000/devel;/opt/ros/kinetic".split(';') if "/home/ros/Desktop/qt5000/devel;/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/home/ros/catkin_ws_mir/devel;/opt/ros/kinetic".split(';') if "/home/ros/catkin_ws_mir/devel;/opt/ros/kinetic" != "" else []
