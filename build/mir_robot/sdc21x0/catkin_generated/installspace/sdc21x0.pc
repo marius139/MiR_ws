@@ -1,8 +1,0 @@
-prefix=/home/ros/MiR_ws/install
-
-Name: sdc21x0
-Description: Description of sdc21x0
-Version: 1.0.4
-Cflags: -I/home/ros/MiR_ws/install/include
-Libs: -L/home/ros/MiR_ws/install/lib 
-Requires: message_runtime std_msgs

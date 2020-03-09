@@ -1,8 +1,0 @@
-prefix=/home/ros/MiR_ws/install
-
-Name: mir_gazebo
-Description: Description of mir_gazebo
-Version: 1.0.4
-Cflags: 
-Libs: -L/home/ros/MiR_ws/install/lib 
-Requires: 
