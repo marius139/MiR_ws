@@ -4,6 +4,11 @@
 #include <actionlib/client/simple_action_client.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
+#include <vector>
+
+#include <boost/thread/condition.hpp>
+#include <boost/thread/mutex.hpp>
+#include <boost/scoped_ptr.hpp>
 
 //Libraries for RealSense
 #include <opencv2/core.hpp>
@@ -13,13 +18,15 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-
 //arduino
 #include <std_msgs/String.h>
 #include <std_msgs/Empty.h>
 #include <std_msgs/Int8.h>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
+//typedef boost::function<void (const SimpleClientGoalState& state,  const ResultConstPtr& result) > SimpleDoneCallback;
+//typedef boost::function<void () > SimpleActiveCallback;
+//typedef boost::function <void (const FeedbackConstPtr& feedback) > SimpleFeedbackCallback;
 
 cv_bridge::CvImagePtr cv_ptr;
 cv_bridge::CvImagePtr cv_ptrDep;
@@ -28,6 +35,8 @@ cv_bridge::CvImagePtr cv_ptrDep;
 geometry_msgs::Pose curPos;
 double curXpose;
 double curYpose;
+std::vector<geometry_msgs::PoseWithCovarianceStamped> previousPoints;
+
 
 double pose(int flag);
 void onPoseSet(double x, double y, double theta);
@@ -36,19 +45,18 @@ array Covariance = {0.0};
 
 int qtGo = 0;
 int curFloor = 0;
+int AGBR = 0;
 int door = 0;
+int maxSize = 50;
+int firstTime = 0;
+
+//Declare functions
+void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, ros::Publisher pubSpeak,  MoveBaseClient& ac);
 
 
-//Delay for a set time in seconds
-void delaying(float t){
-
-  ros::Time tidDelay = ros::Time::now()+ros::Duration(t);
-  while(ros::Time::now()<tidDelay){
-  }
-}
-//RGB image caalback
-void imageCb(const sensor_msgs::ImageConstPtr msg){
-
+//CALLBACK FUNCTIONS ----------------------------------------------------------
+//CALLBACK - RGB image
+void imageCallback(const sensor_msgs::ImageConstPtr msg){
   try
   {
     cv_ptr = cv_bridge::toCvCopy(*msg, sensor_msgs::image_encodings::BGR8);
@@ -58,11 +66,16 @@ void imageCb(const sensor_msgs::ImageConstPtr msg){
     ROS_ERROR("cv_bridge exception: %s", e.what());
     return;
   }
-
 }
-//Depth image caalback
+<<<<<<< HEAD
+//Depth image caalba vck
 void depthCb(const sensor_msgs::ImageConstPtr msg){
+=======
+>>>>>>> 593d5197fbe4c9d5a7419e957ae4933baed4d657
 
+
+//CALLBACK - Depth image
+void depthCallback(const sensor_msgs::ImageConstPtr msg){
   try
   {
     cv_ptrDep = cv_bridge::toCvCopy(*msg, sensor_msgs::image_encodings::TYPE_16UC1);
@@ -72,184 +85,252 @@ void depthCb(const sensor_msgs::ImageConstPtr msg){
     ROS_ERROR("cv_bridge exception: %s", e.what());
     return;
   }
-
 }
-//Send Command to arduino
-void sendToArduino(int x, ros::Publisher pub1){
 
+
+//CALLBACK - Incoming messages from the QT GUI
+void QTCallback(const std_msgs::String msg){
+  if(msg.data=="Go command")
+  qtGo = 1;
+}
+
+
+//CALLBACK - Incomming messaages from the arduino
+void ARDCallback(const std_msgs::Int8 msg){
+  curFloor = msg.data;
+}
+
+
+// CALLBACK - FOR onPoseSet
+void moveBaseCallback(const geometry_msgs::PoseWithCovarianceStamped msg){
+  if (curXpose-msg.pose.pose.position.x >= 0.05 || curXpose-msg.pose.pose.position.x <= -0.05 && curYpose-msg.pose.pose.position.y >= 0.05 || curYpose-msg.pose.pose.position.y){
+    previousPoints.push_back(msg);
+    if (previousPoints.size()>maxSize){
+      previousPoints.erase(previousPoints.begin());
+    }
+  }
+  curXpose = msg.pose.pose.position.x;
+  curYpose = msg.pose.pose.position.y;
+}
+
+
+//CALLBACK - Human recognition (computer vision)
+void CVCallback(const std_msgs::Int8 msg){
+  AGBR = msg.data; //1 = human, 0 = object (AGBR = Anne-Grethe Bjarup Riis)
+}
+
+/*
+// CALLBACK - Called once when the goal completes (ac.sendGoal)
+void doneCb(const actionlib::SimpleClientGoalState& state, const FibonacciResultConstPtr& result){
+  ROS_INFO("Finished in state [%s]", state.toString().c_str());
+  ROS_INFO("Answer: %i", result->sequence.back());
+  ros::shutdown();
+}
+
+*/
+// CALLBACK - Called once when the goal becomes active (ac.sendGoal)
+void activeCb(){
+  ROS_INFO("Goal just went active");
+}
+
+
+// CALLBACK - Called every time feedback is received for the goal (ac.sendGoal)
+void feedbackCb(const MoveBaseClient::SimpleFeedbackCallback& feedback){
+  //ROS_INFO("Got Feedback of length %lu", feedback->sequence.size());
+}
+
+
+
+//FUNCTIONS -------------------------------------------------------------------
+//Delay for a set time in seconds
+void delaying(float t){
+  ros::Time tidDelay = ros::Time::now()+ros::Duration(t);
+  while(ros::Time::now()<tidDelay){
+  }
+}
+
+
+//Send Command to arduino
+void sendToArduino(int x, ros::Publisher pubArd){
   std_msgs::Int8 arduinoMessage;
   arduinoMessage.data = x;
-  pub1.publish(arduinoMessage);
+  pubArd.publish(arduinoMessage);
 }
 
-// CALLBACK FUNCTION FOR onPoseSet
-void moveBaseCallback(const geometry_msgs::PoseWithCovarianceStamped msg){
 
-curXpose = msg.pose.pose.position.x;
-curYpose = msg.pose.pose.position.y;
-//ROS_INFO("x: %f, y: %f",curXpose,curYpose);
+//Send command to speaker
+void sendToSpeaker(int x, ros::Publisher pubSpeak){
+  std_msgs::Int8 speakMessage;
+  speakMessage.data = x;
+  pubSpeak.publish(speakMessage);
 }
+
+
+//TRACE BACK xx meters
+void traceBack(){
+  firstTime = 0; //Reset variable
+
+
+}
+
+
+//RECOVERY BEHAVIOUR
+void recoveryBehaviour(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
+  if(AGBR == 1){
+    ROS_INFO("Object is a human. Telling the person to move.");
+    sendToSpeaker(2, pubSpeak);
+    double beginRecoverTimer = ros::Time::now().toSec();
+
+    //Wait 5 sec for the person to move
+    while(ros::Time::now().toSec() - beginRecoverTimer <= 5.0){
+      ros::spinOnce();
+    }
+    if(firstTime = 0){
+      firstTime++;
+      ac.cancelAllGoals();
+      moveToPoint(x, y, rot, button, pubArd, pubSpeak, ac);
+    }
+  }
+  ROS_INFO("Initialising Trace Back method.");
+  traceBack();
+}
+
+
 //MOVETOPOINT FUNCTION
-void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, MoveBaseClient& ac){
-
+void moveToPoint(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
   //MoveBaseClient ac("move_base",true);
   //while(!ac.waitForServer(ros::Duration(3.0))){
-    //ROS_INFO("Waiting for the move_base action server to come up");
+  //ROS_INFO("Waiting for the move_base action server to come up");
   //}
   ac.waitForServer();
-	ac.cancelAllGoals();
-
-
-	move_base_msgs::MoveBaseGoal start;
+  ac.cancelAllGoals();
+  move_base_msgs::MoveBaseGoal start;
 
   start.target_pose.header.frame_id = "map";
   start.target_pose.header.stamp = ros::Time::now();
   start.target_pose.pose.position.x = x;
   start.target_pose.pose.position.y = y;
 
-
   tf::Quaternion quat;
   quat.setRPY(0.0, 0.0, rot);
   tf::quaternionTFToMsg(quat, start.target_pose.pose.orientation);
-	ros::Rate rate(1);
+  ros::Rate rate(1);
 
-  ac.sendGoal(start);
+  ac.sendGoal(start, NULL, &activeCb, &feedbackCb);
+  //ac.sendGoal(start, MoveBaseClient::SimpleFeedbackCallback());
   ac.waitForResult();
 
-	while(ac.getState() != actionlib::SimpleClientGoalState::SUCCEEDED ){
+  while(ac.getState() != actionlib::SimpleClientGoalState::SUCCEEDED ){
+    if (ac.getState() == actionlib::SimpleClientGoalState::ABORTED){
+      ROS_INFO("ERROR: The path is blocked, initialising recovery behaviour.");
+      recoveryBehaviour(x, y, rot, button, pubArd, pubSpeak, ac);
 
-		if (ac.getState() == actionlib::SimpleClientGoalState::ABORTED){
-			ROS_INFO("The path is blocked, I am waiting");
-switch (button) {
-  case 1:
-    sendToArduino(7,pub1);
-    delaying(0.5);
-    break;
+      /*    OLD BRUTE FORCE BUTTONS
+      switch (button) {
+      case 1:
+      sendToArduino(7,pub1);
+      delaying(0.5);
+      break;
 
-  case 2:
-    sendToArduino(6,pub1);
-    delaying(0.5);
-    break;
+      case 2:
+      sendToArduino(6,pub1);
+      delaying(0.5);
+      break;
 
-  default:
-  break;
-}
-}
-		ac.sendGoal(start, NULL, NULL, NULL);
-		ac.waitForResult();
-
-		rate.sleep();
+      default:
+      break;
+    }
+    */
   }
+  ac.sendGoal(start, NULL, NULL, NULL);
+  ac.waitForResult();
 
-	//actionlib::SimpleClientGoalState state = ac.getState();
-	//ROS_INFO("Action state: %s", state.toString().c_str() );
-  //ac.stopTrackingGoal();
-  //ac.cancelAllGoals();
-
-  ROS_INFO("Hooray, the base moved to position");
-
+  rate.sleep();
 }
+
+//actionlib::SimpleClientGoalState state = ac.getState();
+//ROS_INFO("Action state: %s", state.toString().c_str() );
+//ac.stopTrackingGoal();
+//ac.cancelAllGoals();
+firstTime = 0; //Reset variable
+ROS_INFO("Hooray, the base moved to position");
+}
+
+
 //TELEPORT THE ROBOT ON INTERNAL MAP FUNCTION
 void onPoseSet(double x, double y, double rot, ros::Publisher pub2){
-    ros::Rate loop_rate(1);
+  ros::Rate loop_rate(1);
 
-      //Geometry message for initial pose
-      geometry_msgs::PoseWithCovarianceStamped pose;
+  //Geometry message for initial pose
+  geometry_msgs::PoseWithCovarianceStamped pose;
+  std::string fixed_frame = "map";
+  pose.header.frame_id = fixed_frame;
+  pose.header.stamp = ros::Time::now();
+  // set x,y coord
+  pose.pose.pose.position.x = x;
+  pose.pose.pose.position.y = y;
+  pose.pose.pose.position.z = 0.0;
+  //Convert rotation(radians) to Quaternion
+  tf::Quaternion quat;
+  quat.setRPY(0.0, 0.0, rot);
+  tf::quaternionTFToMsg(quat, pose.pose.pose.orientation);
+  //Covariance matrix with 0.0
+  pose.pose.covariance = Covariance;
+  // publish
+  ROS_INFO("x: %f, y: %f, z: 0.0 rot: %f",x,y, rot);
 
-      std::string fixed_frame = "map";
-      pose.header.frame_id = fixed_frame;
-      pose.header.stamp = ros::Time::now();
-      // set x,y coord
-      pose.pose.pose.position.x = x;
-      pose.pose.pose.position.y = y;
-      pose.pose.pose.position.z = 0.0;
-      //Convert rotation(radians) to Quaternion
-      tf::Quaternion quat;
-      quat.setRPY(0.0, 0.0, rot);
-      tf::quaternionTFToMsg(quat, pose.pose.pose.orientation);
-      //Covariance matrix with 0.0
-      pose.pose.covariance = Covariance;
-      // publish
-      ROS_INFO("x: %f, y: %f, z: 0.0 rot: %f",x,y, rot);
-
-    while( x-0.1 > curXpose || curXpose > x+0.1 ||  y-0.1 > curYpose || curYpose > y+0.1 ){
-
+  while( x-0.1 > curXpose || curXpose > x+0.1 ||  y-0.1 > curYpose || curYpose > y+0.1 ){
     ROS_INFO("current pos x: %f, y: %f,",curXpose,curYpose);
 
-      pub2.publish(pose);
-      loop_rate.sleep();
-      ros::spinOnce();
+    pub2.publish(pose);
+    loop_rate.sleep();
+    ros::spinOnce();
   }
 }
+
 
 //Get RGB image
 cv::Mat getImage() {
-    cv::Mat img = cv::Mat(100,100, CV_8UC3); //RGB
-    ros::Time tid = ros::Time::now()+ros::Duration(5.0);
-
-    while (ros::ok()) {
-
-      if(ros::Time::now()>tid){
-          ROS_INFO("Did not get image. Abandonning");
-          return img;
-      }
-
+  cv::Mat img = cv::Mat(100,100, CV_8UC3); //RGB
+  ros::Time tid = ros::Time::now()+ros::Duration(5.0);
+  while (ros::ok()) {
+    if(ros::Time::now()>tid){
+      ROS_INFO("Did not get image. Abandonning");
+      return img;
+    }
     ros::spinOnce();
     if(cv_ptr){
-
       img = cv::Mat(cv_ptr->image.rows, cv_ptr->image.cols, CV_8UC3);
       img = cv_ptr->image;
       cv_ptr.reset();
-
-
-
       return img;
     }
-
   }
-return img;
+  return img;
 }
+
+
 //Get depth image
 cv::Mat getDepthImage() {
-
-    cv::Mat imgD = cv::Mat(100,100, CV_16UC1); //Depth
-    ros::Time tidD = ros::Time::now()+ros::Duration(5.0);
-
-    while (ros::ok()) {
-
-      if(ros::Time::now()>tidD){
-          ROS_INFO("Did not get image. Abandonning");
-          return imgD;
-      }
-
+  cv::Mat imgD = cv::Mat(100,100, CV_16UC1); //Depth
+  ros::Time tidD = ros::Time::now()+ros::Duration(5.0);
+  while (ros::ok()) {
+    if(ros::Time::now()>tidD){
+      ROS_INFO("Did not get image. Abandonning");
+      return imgD;
+    }
     ros::spinOnce();
     if(cv_ptrDep){
-
       imgD = cv::Mat(cv_ptrDep->image.rows, cv_ptrDep->image.cols, CV_16UC1);
       imgD = cv_ptrDep->image;
       cv_ptrDep.reset();
-
-
-
       return imgD;
     }
-
   }
-return imgD;
+  return imgD;
 }
 
-//Incoming messages from the QT GUI
-void QTcallback(const std_msgs::String msg){
 
-if(msg.data=="Go command")
-qtGo = 1;
-}
-//Incomming messaages from the arduino
-void ARDcallback(const std_msgs::Int8 msg){
-
-curFloor = msg.data;
-
-}
 //Wait for the go command from the QT GUI
 void waitForGo(){
   qtGo = 0;
@@ -261,6 +342,8 @@ void waitForGo(){
   }
   qtGo==1;
 }
+
+
 //Request current floor and wait for the floor to be reached
 void waitForFloor(int f, ros::Publisher pub1){
 
@@ -271,6 +354,8 @@ void waitForFloor(int f, ros::Publisher pub1){
     delaying(1.0);
   }
 }
+
+
 //Check wich elevator door is open
 int elevatorDoor(int floorNR){
 
@@ -293,44 +378,44 @@ int elevatorDoor(int floorNR){
 
   cv::medianBlur(dep, dep2, 5);
 
-//left image
+  //left image
   for (int x = 0; x < ((dep2.cols/2)+offset)-cutout; x++) {
-      for (int y = 0; y < dep2.rows-150; y++) {
-        depLeft.at<unsigned short>(y, x) = dep2.at<unsigned short>(y, x);
+    for (int y = 0; y < dep2.rows-150; y++) {
+      depLeft.at<unsigned short>(y, x) = dep2.at<unsigned short>(y, x);
+    }
   }
-}
-//right image
-for (int x = ((dep2.cols/2)+offset)+cutout; x < dep2.cols; x++) {
+  //right image
+  for (int x = ((dep2.cols/2)+offset)+cutout; x < dep2.cols; x++) {
     for (int y = 0; y < dep2.rows-150; y++) {
       depRight.at<unsigned short>(y, x-(((dep2.cols/2)+offset)+cutout)) = dep2.at<unsigned short>(y, x);
-}
-}
-//Average left image
-double avgCountLeft = 0;
-double depTotalLeft = 0.0;
-double avgDepLeft = 0.0;
-for (int x = 0; x < depLeft.cols; x++) {
-  for (int y = 0; y < depLeft.rows; y++) {
-if (depLeft.at<unsigned short>(y, x)<10000 && depLeft.at<unsigned short>(y, x)>1){
-  depTotalLeft+=(double)depLeft.at<unsigned short>(y, x);
-  avgCountLeft++;
     }
   }
-}
-avgDepLeft = depTotalLeft/avgCountLeft;
-//Average rigt image
-double avgCountRight = 0;
-double depTotalRight = 0.0;
-double avgDepRight = 0.0;
-for (int x = 0; x < depRight.cols; x++) {
-  for (int y = 0; y < depRight.rows; y++) {
-if (depRight.at<unsigned short>(y, x)<10000 && depRight.at<unsigned short>(y, x)>1){
-  depTotalRight+=(double)depRight.at<unsigned short>(y, x);
-  avgCountRight++;
+  //Average left image
+  double avgCountLeft = 0;
+  double depTotalLeft = 0.0;
+  double avgDepLeft = 0.0;
+  for (int x = 0; x < depLeft.cols; x++) {
+    for (int y = 0; y < depLeft.rows; y++) {
+      if (depLeft.at<unsigned short>(y, x)<10000 && depLeft.at<unsigned short>(y, x)>1){
+        depTotalLeft+=(double)depLeft.at<unsigned short>(y, x);
+        avgCountLeft++;
+      }
     }
   }
-}
-avgDepRight = depTotalRight/avgCountRight;
+  avgDepLeft = depTotalLeft/avgCountLeft;
+  //Average right image
+  double avgCountRight = 0;
+  double depTotalRight = 0.0;
+  double avgDepRight = 0.0;
+  for (int x = 0; x < depRight.cols; x++) {
+    for (int y = 0; y < depRight.rows; y++) {
+      if (depRight.at<unsigned short>(y, x)<10000 && depRight.at<unsigned short>(y, x)>1){
+        depTotalRight+=(double)depRight.at<unsigned short>(y, x);
+        avgCountRight++;
+      }
+    }
+  }
+  avgDepRight = depTotalRight/avgCountRight;
 
   ROS_INFO("Left mean: %f",avgDepLeft);
   ROS_INFO("Right mean: %f",avgDepRight);
@@ -347,96 +432,101 @@ avgDepRight = depTotalRight/avgCountRight;
   cv::imshow("jet",colorIM);
   cv::waitKey(0);
 
-if (floorNR==1) {
-  if(avgDepRight>threshRight1){
-    return 1; //right door open
-  }else if(avgDepLeft>threshLeft1){
-    return 2;//left door open
+  if (floorNR==1) {
+    if(avgDepRight>threshRight1){
+      return 1; //right door open
+    }else if(avgDepLeft>threshLeft1){
+      return 2;//left door open
     }else{
-    return 0; //no door open
+      return 0; //no door open
     }
   }else if(floorNR==2){
     if(avgDepRight>threshRight2){
       return 1; //right door open
     }else if(avgDepLeft>threshLeft2){
       return 2;//left door open
-      }else{
+    }else{
       return 0; //no door open
-      }
+    }
   }
 
 }
+
+
 //Calibrate arduino
 void calArd(int x, ros::Publisher pub1){
-while(curFloor != 8){
-  sendToArduino(x, pub1);//Request current floor NR
-  delaying(1.0);
-  ros::spinOnce();
-  ROS_INFO("Connect: %d",curFloor);
+  while(curFloor != 8){
+    sendToArduino(x, pub1);//Request current floor NR
+    delaying(1.0);
+    ros::spinOnce();
+    ROS_INFO("Connect: %d",curFloor);
   }
 }
 
 
-//MAIN -------------------------------------------------------
+//MAIN ------------------------------------------------------------------------
 int main(int argc, char** argv){
-    //Initialize ros
-    ros::init(argc, argv, "simple_navigation_goals");
-    ros::start();
-    ros::Rate loop_rate(1);
+  //Initialize ros
+  ros::init(argc, argv, "simple_navigation_goals");
+  ros::start();
+  ros::Rate loop_rate(1);
 
-    ros::NodeHandle nh1;
+  ros::NodeHandle nh1;
 
-    //Subscribe to camera rgb image
-    ros::Subscriber image_sub_ = nh1.subscribe("/camera/color/image_raw", 1,imageCb);
-    //Subscribe to camera depth
-    ros::Subscriber depth_sub_ = nh1.subscribe("/camera/depth/image_rect_raw", 1,depthCb);
-    //Subscribe to qt topic
-    ros::Subscriber qt_sub = nh1.subscribe("chatter", 1, QTcallback);
-    //Subscribe to feedback from arduino
-    ros::Subscriber arduino_sub = nh1.subscribe("fromArduino", 64, ARDcallback);
+  //Subscribe to camera rgb image
+  ros::Subscriber image_sub_ = nh1.subscribe("/camera/color/image_raw", 1,imageCallback);
+  //Subscribe to camera depth
+  ros::Subscriber depth_sub_ = nh1.subscribe("/camera/depth/image_rect_raw", 1,depthCallback);
+  //Subscribe to qt topic
+  ros::Subscriber qt_sub = nh1.subscribe("chatter", 1, QTCallback);
+  //Subscribe to feedback from arduino
+  ros::Subscriber arduino_sub = nh1.subscribe("fromArduino", 64, ARDCallback);
+  //Subscribe to computer vision topic
+  ros::Subscriber humanRecognition_sub = nh1.subscribe("CVtopic", 1, CVCallback);
+  //Subscribe to the mir platform current position in the map
+  ros::Subscriber sub_ = nh1.subscribe<geometry_msgs::PoseWithCovarianceStamped>("/amcl_pose", 10, moveBaseCallback);
+  //Publisher for the arduino
+  ros::Publisher pubArd = nh1.advertise<std_msgs::Int8> ("/toArduino", 100);
+  //Publisher for teleporting
+  ros::Publisher pubPose = nh1.advertise<geometry_msgs::PoseWithCovarianceStamped> ("/initialpose", 1);
 
-    //Subscribe to the mir platform current position in the map
-    ros::Subscriber sub_ = nh1.subscribe<geometry_msgs::PoseWithCovarianceStamped>("/amcl_pose", 10, moveBaseCallback);
-    //Publisher for the arduino
-    ros::Publisher pubArd = nh1.advertise<std_msgs::Int8> ("/toArduino", 100);
-    //Publisher for teleporting
-    ros::Publisher pubPose = nh1.advertise<geometry_msgs::PoseWithCovarianceStamped> ("/initialpose", 1);
+  ros::Publisher pubSpeak = nh1.advertise<std_msgs::Int8> ("/speaker", 1);
 
-    //MoveBaseClient ac("move_base",true);
-/*
-    while(!ac.waitForServer(ros::Duration(3.0))){
-      ROS_INFO("Waiting for the move_base action server to come up");
-    }
+  MoveBaseClient ac("move_base",true);
+  /*
+  while(!ac.waitForServer(ros::Duration(3.0))){
+  ROS_INFO("Waiting for the move_base action server to come up");
+}
 
 
-    ac.cancelAllGoals();
+ac.cancelAllGoals();
 */
 
-    //elevatorDoor(1);
+//elevatorDoor(1);
 
-    //door 1 = right door
-    //door 2 = left door
+//door 1 = right door
+//door 2 = left door
 
-    //Ard 1 = calibrate to floor 1
-    //Ard 2 = calibrate to floor 2
-    //Ard 3 = Start floor measurements
-    //Ard 4 = request floor
-    //Ard 5 button = Blue
-    //Ard 6 button = red
-    //Ard 7 button = yellow
-    //Ard 8 button = green
+//Ard 1 = calibrate to floor 1
+//Ard 2 = calibrate to floor 2
+//Ard 3 = Start floor measurements
+//Ard 4 = request floor
+//Ard 5 button = Blue
+//Ard 6 button = red
+//Ard 7 button = yellow
+//Ard 8 button = green
 
 //FINAL
 /*
 for (int i = 0; i < 3; i++) {
-  moveToPoint(6.4, 21.4, 0.0, 0, pubArd, ac);
-  delaying(5.0);
-  sendToArduino(6, pubArd);
-  delaying(1.0);
-  moveToPoint(16.250, 19.600, -1.57, 0, pubArd, ac);
-  delaying(5.0);
-  sendToArduino(7, pubArd);
-  delaying(1.0);
+moveToPoint(6.4, 21.4, 0.0, 0, pubArd, ac);
+delaying(5.0);
+sendToArduino(6, pubArd);
+delaying(1.0);
+moveToPoint(16.250, 19.600, -1.57, 0, pubArd, ac);
+delaying(5.0);
+sendToArduino(7, pubArd);
+delaying(1.0);
 }
 */
 
@@ -463,11 +553,11 @@ ros::Time timeoutDoor = ros::Time::now()+ros::Duration(10.0);
 door = 0;
 
 while(door==0){
-  if(ros::Time::now()>timeoutDoor){
-    goto callElevator;
-  }
-  door = elevatorDoor(1); //Check elevators first floor
-  delaying(0.5);
+if(ros::Time::now()>timeoutDoor){
+goto callElevator;
+}
+door = elevatorDoor(1); //Check elevators first floor
+delaying(0.5);
 }
 ROS_INFO("door: %i",door);
 
@@ -550,11 +640,11 @@ ros::Time timeoutDoor = ros::Time::now()+ros::Duration(10.0);
 door = 0;
 
 while(door==0){
-  if(ros::Time::now()>timeoutDoor){
-    goto callElevator;
-  }
-  door = elevatorDoor(2); //Check elevators second floor
-  delaying(0.5);
+if(ros::Time::now()>timeoutDoor){
+goto callElevator;
+}
+door = elevatorDoor(2); //Check elevators second floor
+delaying(0.5);
 }
 ROS_INFO("door: %i",door);
 
@@ -619,46 +709,46 @@ moveToPoint(6.1, 4.7, 3.14, 0, pubArd, ac);
 
 //Elevator Fib test
 
-        //ROS_INFO("1");
-        //moveToPoint(12.7, 21.350, 0.0);
-        //ROS_INFO("2");
-	//      moveToPoint(16.450, 19.0, -1.571);
-	//moveToPoint(16.450, 17.945, 1.571);
-	      //moveToPoint(16.450, 17.605, 1.571);
+//ROS_INFO("1");
+//moveToPoint(12.7, 21.350, 0.0);
+//ROS_INFO("2");
+//      moveToPoint(16.450, 19.0, -1.571);
+//moveToPoint(16.450, 17.945, 1.571);
+//moveToPoint(16.450, 17.605, 1.571);
 
-	 //ROS_INFO("3");
-	//     moveToPoint(16.450, 16.950, -1.571);
-        //ROS_INFO("Reverse 1");
-	//      moveToPoint(16.450, 17.950, -1.571);
-        //ROS_INFO("Reverse 2");
-	//      moveToPoint(16.450, 18.950, -1.571);
-        /*ROS_INFO("teleport");
-        onPoseSet(15.300,2.300, 1.571, pubPose);
+//ROS_INFO("3");
+//     moveToPoint(16.450, 16.950, -1.571);
+//ROS_INFO("Reverse 1");
+//      moveToPoint(16.450, 17.950, -1.571);
+//ROS_INFO("Reverse 2");
+//      moveToPoint(16.450, 18.950, -1.571);
+/*ROS_INFO("teleport");
+onPoseSet(15.300,2.300, 1.571, pubPose);
 
-        ROS_INFO("4");
-        moveToPoint(9.400, 6.900, 0.0);
+ROS_INFO("4");
+moveToPoint(9.400, 6.900, 0.0);
 
-	//moveToPoint(15.300,4.250, 1.571);
-	//moveToPoint(15.300,3.745, 1.571);
-	//moveToPoint(15.300,2.750, 1.571);
+//moveToPoint(15.300,4.250, 1.571);
+//moveToPoint(15.300,3.745, 1.571);
+//moveToPoint(15.300,2.750, 1.571);
 
-	//moveToPoint(15.150,3.000, 1.571);
-	//moveToPoint(15.150,3.800, 1.571);
-	ROS_INFO("3");
-        //moveToPoint(15.300,2.300, 1.571);
-	moveToPoint(15.300,2.300, -1.571);
-        ROS_INFO("teleport");
-        //onPoseSet(16.450, 16.950, 1.571, pubPose);
-	onPoseSet(16.450, 16.950, -1.571, pubPose);
-	//moveToPoint(16.450, 17.945, -1.571);
-	moveToPoint(16.450, 17.605, -1.571);
-	moveToPoint(16.450, 18.605, -1.571);
+//moveToPoint(15.150,3.000, 1.571);
+//moveToPoint(15.150,3.800, 1.571);
+ROS_INFO("3");
+//moveToPoint(15.300,2.300, 1.571);
+moveToPoint(15.300,2.300, -1.571);
+ROS_INFO("teleport");
+//onPoseSet(16.450, 16.950, 1.571, pubPose);
+onPoseSet(16.450, 16.950, -1.571, pubPose);
+//moveToPoint(16.450, 17.945, -1.571);
+moveToPoint(16.450, 17.605, -1.571);
+moveToPoint(16.450, 18.605, -1.571);
 
-        ROS_INFO("1");
-        moveToPoint(12.7, 21.350, 0.0 );*/
-    //  }
+ROS_INFO("1");
+moveToPoint(12.7, 21.350, 0.0 );*/
+//  }
 
-      ROS_INFO("DONE");
+ROS_INFO("DONE");
 
-   return 0;
- }
+return 0;
+}
