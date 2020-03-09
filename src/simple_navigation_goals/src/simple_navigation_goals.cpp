@@ -67,11 +67,6 @@ void imageCallback(const sensor_msgs::ImageConstPtr msg){
     return;
   }
 }
-<<<<<<< HEAD
-//Depth image caalba vck
-void depthCb(const sensor_msgs::ImageConstPtr msg){
-=======
->>>>>>> 593d5197fbe4c9d5a7419e957ae4933baed4d657
 
 
 //CALLBACK - Depth image
@@ -133,12 +128,12 @@ void activeCb(){
   ROS_INFO("Goal just went active");
 }
 
-
+/*
 // CALLBACK - Called every time feedback is received for the goal (ac.sendGoal)
 void feedbackCb(const MoveBaseClient::SimpleFeedbackCallback& feedback){
   //ROS_INFO("Got Feedback of length %lu", feedback->sequence.size());
 }
-
+*/
 
 
 //FUNCTIONS -------------------------------------------------------------------
@@ -216,7 +211,7 @@ void moveToPoint(double x, double y, double rot, int button, ros::Publisher pubA
   tf::quaternionTFToMsg(quat, start.target_pose.pose.orientation);
   ros::Rate rate(1);
 
-  ac.sendGoal(start, NULL, &activeCb, &feedbackCb);
+  //ac.sendGoal(start, NULL, &activeCb, &feedbackCb);
   //ac.sendGoal(start, MoveBaseClient::SimpleFeedbackCallback());
   ac.waitForResult();
 
