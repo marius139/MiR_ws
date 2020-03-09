@@ -1,0 +1,8 @@
+prefix=/home/ros/MiR_ws/devel
+
+Name: projectImages
+Description: Description of projectImages
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ros/MiR_ws/devel/lib 
+Requires: 

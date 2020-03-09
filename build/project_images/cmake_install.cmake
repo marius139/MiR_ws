@@ -47,3 +47,18 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/project_images" TYPE FILE FILES "/home/ros/MiR_ws/src/project_images/package.xml")
 endif()
 
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/MiR_ws/build/project_images/catkin_generated/installspace/project_images.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/project_images/cmake" TYPE FILE FILES
+    "/home/ros/MiR_ws/build/project_images/catkin_generated/installspace/project_imagesConfig.cmake"
+    "/home/ros/MiR_ws/build/project_images/catkin_generated/installspace/project_imagesConfig-version.cmake"
+    )
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/project_images" TYPE FILE FILES "/home/ros/MiR_ws/src/project_images/package.xml")
+endif()
+

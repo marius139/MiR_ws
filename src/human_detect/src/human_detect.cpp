@@ -8,6 +8,9 @@
 
 #define OPENCV_ENABLE_NONFREE
 
+//Path to folder to store descriptors
+const std::string desPath = "/home/ros/MiR_ws/src/human_detect/src/human_detect/";
+//Path to resources
 const std::string resources = "/home/ros/MiR_ws/src/simple_navigation_goals/src/resources/";
 const int nrMatches = 10;
 
@@ -54,7 +57,7 @@ int main(int argc, char** argv){
     }
 
 
-  cv::FileStorage fsWrite("/home/ros/MiR_ws/src/human_detect/src/descriptors.xml", cv::FileStorage::WRITE );
+  cv::FileStorage fsWrite(desPath+"descriptors.xml", cv::FileStorage::WRITE );
 
   while (!fsWrite.isOpened()) {
 
@@ -65,9 +68,6 @@ int main(int argc, char** argv){
   cv::drawMatches(img_1, keypoints_1,img_2, keypoints_2, goodMatches, output);
   cv::imshow("match", output);
   cv::waitKey(0);
-
-
-
 
   }
 

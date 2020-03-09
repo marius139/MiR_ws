@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/ros/MiR_ws/devel:$CMAKE_PREFIX_PATH"
 export PWD="/home/ros/MiR_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/ros/MiR_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/ros/MiR_ws/src:$ROS_PACKAGE_PATH"
