@@ -66,6 +66,18 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,29 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -331,49 +331,19 @@ _mir_msgs_generate_messages_check_deps_RobotStatus/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_RobotStatus/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule
 
 # Convenience name for target.
-_mir_msgs_generate_messages_check_deps_PlanSegments: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule
+_mir_msgs_generate_messages_check_deps_IOs: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule
 
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments
+.PHONY : _mir_msgs_generate_messages_check_deps_IOs
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_PlanSegments/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlCommand: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_ChargingState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_ChargingState/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState/fast
+_mir_msgs_generate_messages_check_deps_IOs/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_IOs/fast
 
 # Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Twist2D.dir/rule:
@@ -421,21 +391,6 @@ _mir_msgs_generate_messages_check_deps_BMSData/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_BMSData/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_Path: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_Path
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Path/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Path/fast
-
-# Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/mir_msgs_geneus.dir/rule:
 	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_geneus.dir/rule
 .PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_geneus.dir/rule
@@ -466,274 +421,19 @@ _mir_msgs_generate_messages_check_deps_HookExtendedStatus/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_HookExtendedStatus/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule
 
 # Convenience name for target.
-mir_msgs_genlisp: mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule
+_mir_msgs_generate_messages_check_deps_Path: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/rule
 
-.PHONY : mir_msgs_genlisp
+.PHONY : _mir_msgs_generate_messages_check_deps_Path
 
 # fast build rule for target.
-mir_msgs_genlisp/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build
-.PHONY : mir_msgs_genlisp/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_RobotState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_RobotState/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotState/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule
-
-# Convenience name for target.
-mir_msgs_generate_messages: mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule
-
-.PHONY : mir_msgs_generate_messages
-
-# fast build rule for target.
-mir_msgs_generate_messages/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build
-.PHONY : mir_msgs_generate_messages/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_GripperState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_GripperState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_GripperState/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_GripperState/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_JoystickVel: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_JoystickVel/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_ExternalRobot: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_ExternalRobot/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_Proximity: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_Proximity
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Proximity/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Proximity/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_LocalMapStat: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_LocalMapStat/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_BatteryCurrents: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_BatteryCurrents/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_PlanSegment: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_PlanSegment/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_IOs: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_IOs
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_IOs/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_IOs/fast
+_mir_msgs_generate_messages_check_deps_Path/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Path/fast
 
 # Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_HookStatus.dir/rule:
@@ -781,64 +481,124 @@ _mir_msgs_generate_messages_check_deps_MirStatus/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_MirStatus/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule
+mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule
 
 # Convenience name for target.
-mir_msgs_generate_messages_eus: mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule
+mir_msgs_genlisp: mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/rule
 
-.PHONY : mir_msgs_generate_messages_eus
+.PHONY : mir_msgs_genlisp
 
 # fast build rule for target.
-mir_msgs_generate_messages_eus/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build
-.PHONY : mir_msgs_generate_messages_eus/fast
+mir_msgs_genlisp/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build
+.PHONY : mir_msgs_genlisp/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule
 
 # Convenience name for target.
-_mir_msgs_generate_messages_check_deps_RobotMode: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule
+_mir_msgs_generate_messages_check_deps_RobotState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/rule
 
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotState
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_RobotMode/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode/fast
+_mir_msgs_generate_messages_check_deps_RobotState/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotState/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule
+mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-_mir_msgs_generate_messages_check_deps_Event: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule
+geometry_msgs_generate_messages_nodejs: mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : _mir_msgs_generate_messages_check_deps_Event
+.PHONY : geometry_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Event/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Event/fast
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule
 
 # Convenience name for target.
-_mir_msgs_generate_messages_check_deps_Error: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule
+_mir_msgs_generate_messages_check_deps_GripperState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/rule
 
-.PHONY : _mir_msgs_generate_messages_check_deps_Error
+.PHONY : _mir_msgs_generate_messages_check_deps_GripperState
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Error/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Error/fast
+_mir_msgs_generate_messages_check_deps_GripperState/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_GripperState/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_ExternalRobot: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_ExternalRobot/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_BatteryCurrents: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_BatteryCurrents/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_BrakeState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_BrakeState/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_Encoders: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_Encoders
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Encoders/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Encoders/fast
 
 # Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_StampedEncoders.dir/rule:
@@ -886,34 +646,154 @@ _mir_msgs_generate_messages_check_deps_Pose2D/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_Pose2D/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule
+mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-_mir_msgs_generate_messages_check_deps_Encoders: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/rule
+geometry_msgs_generate_messages_cpp: mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : _mir_msgs_generate_messages_check_deps_Encoders
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Encoders/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Encoders/fast
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule
 
 # Convenience name for target.
-_mir_msgs_generate_messages_check_deps_BrakeState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/rule
+_mir_msgs_generate_messages_check_deps_Proximity: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/rule
 
-.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState
+.PHONY : _mir_msgs_generate_messages_check_deps_Proximity
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_BrakeState/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState/fast
+_mir_msgs_generate_messages_check_deps_Proximity/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Proximity/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_LocalMapStat: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_LocalMapStat/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+mir_msgs_generate_messages_eus: mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/rule
+
+.PHONY : mir_msgs_generate_messages_eus
+
+# fast build rule for target.
+mir_msgs_generate_messages_eus/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build
+.PHONY : mir_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_RobotMode: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_RobotMode/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+mir_msgs_generate_messages: mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/rule
+
+.PHONY : mir_msgs_generate_messages
+
+# fast build rule for target.
+mir_msgs_generate_messages/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build
+.PHONY : mir_msgs_generate_messages/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_PlanSegment: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_PlanSegment/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_Error: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_Error
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Error/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Error/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_Event: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_Event
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Event/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Event/fast
 
 # Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
@@ -976,51 +856,6 @@ _mir_msgs_generate_messages_check_deps_Device/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_Device/fast
 
 # Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlState/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule
-.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule
-
-# Convenience name for target.
-_mir_msgs_generate_messages_check_deps_Serial: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule
-
-.PHONY : _mir_msgs_generate_messages_check_deps_Serial
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Serial/fast:
-	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Serial/fast
-
-# Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_SafetyStatus.dir/rule:
 	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_SafetyStatus.dir/rule
 .PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_SafetyStatus.dir/rule
@@ -1049,6 +884,21 @@ _mir_msgs_generate_messages_check_deps_Pendant: mir_robot/mir_msgs/CMakeFiles/_m
 _mir_msgs_generate_messages_check_deps_Pendant/fast:
 	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Pendant.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Pendant.dir/build
 .PHONY : _mir_msgs_generate_messages_check_deps_Pendant/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_JoystickVel: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_JoystickVel/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel/fast
 
 # Convenience name for target.
 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_WorldMap.dir/rule:
@@ -1170,6 +1020,81 @@ _mir_msgs_generate_messages_check_deps_Gpio/fast:
 	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Gpio.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Gpio.dir/build
 .PHONY : _mir_msgs_generate_messages_check_deps_Gpio/fast
 
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_ChargingState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_ChargingState/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_Serial: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_Serial
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Serial/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Serial/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlState: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlState/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlCommand: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast
+
+# Convenience name for target.
+mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule
+.PHONY : mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule
+
+# Convenience name for target.
+_mir_msgs_generate_messages_check_deps_PlanSegments: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/rule
+
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_PlanSegments/fast:
+	cd /home/ros/MiR_ws/build && $(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1177,6 +1102,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mir_msgs_genpy"
@@ -1190,57 +1116,45 @@ help:
 	@echo "... _mir_msgs_generate_messages_check_deps_PowerBoardMotorStatus"
 	@echo "... _mir_msgs_generate_messages_check_deps_WebPath"
 	@echo "... _mir_msgs_generate_messages_check_deps_RobotStatus"
-	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegments"
-	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlCommand"
-	@echo "... install/strip"
-	@echo "... _mir_msgs_generate_messages_check_deps_ChargingState"
+	@echo "... _mir_msgs_generate_messages_check_deps_IOs"
 	@echo "... _mir_msgs_generate_messages_check_deps_Twist2D"
 	@echo "... _mir_msgs_generate_messages_check_deps_MirExtra"
 	@echo "... _mir_msgs_generate_messages_check_deps_BMSData"
-	@echo "... _mir_msgs_generate_messages_check_deps_Path"
 	@echo "... mir_msgs_geneus"
 	@echo "... _mir_msgs_generate_messages_check_deps_HookExtendedStatus"
-	@echo "... mir_msgs_genlisp"
-	@echo "... _mir_msgs_generate_messages_check_deps_RobotState"
-	@echo "... mir_msgs_generate_messages"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... _mir_msgs_generate_messages_check_deps_GripperState"
-	@echo "... _mir_msgs_generate_messages_check_deps_JoystickVel"
-	@echo "... install"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... _mir_msgs_generate_messages_check_deps_ExternalRobot"
-	@echo "... _mir_msgs_generate_messages_check_deps_Proximity"
-	@echo "... _mir_msgs_generate_messages_check_deps_LocalMapStat"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... _mir_msgs_generate_messages_check_deps_BatteryCurrents"
-	@echo "... test"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegment"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... _mir_msgs_generate_messages_check_deps_IOs"
+	@echo "... _mir_msgs_generate_messages_check_deps_Path"
 	@echo "... _mir_msgs_generate_messages_check_deps_HookStatus"
 	@echo "... _mir_msgs_generate_messages_check_deps_Devices"
 	@echo "... _mir_msgs_generate_messages_check_deps_MirStatus"
-	@echo "... mir_msgs_generate_messages_eus"
-	@echo "... _mir_msgs_generate_messages_check_deps_RobotMode"
-	@echo "... _mir_msgs_generate_messages_check_deps_Event"
-	@echo "... _mir_msgs_generate_messages_check_deps_Error"
+	@echo "... mir_msgs_genlisp"
+	@echo "... _mir_msgs_generate_messages_check_deps_RobotState"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... _mir_msgs_generate_messages_check_deps_GripperState"
+	@echo "... _mir_msgs_generate_messages_check_deps_ExternalRobot"
+	@echo "... _mir_msgs_generate_messages_check_deps_BatteryCurrents"
+	@echo "... _mir_msgs_generate_messages_check_deps_BrakeState"
+	@echo "... _mir_msgs_generate_messages_check_deps_Encoders"
 	@echo "... _mir_msgs_generate_messages_check_deps_StampedEncoders"
 	@echo "... _mir_msgs_generate_messages_check_deps_WorldModel"
 	@echo "... _mir_msgs_generate_messages_check_deps_Pose2D"
-	@echo "... _mir_msgs_generate_messages_check_deps_Encoders"
-	@echo "... _mir_msgs_generate_messages_check_deps_BrakeState"
+	@echo "... test"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... _mir_msgs_generate_messages_check_deps_Proximity"
+	@echo "... _mir_msgs_generate_messages_check_deps_LocalMapStat"
+	@echo "... mir_msgs_generate_messages_eus"
+	@echo "... _mir_msgs_generate_messages_check_deps_RobotMode"
+	@echo "... mir_msgs_generate_messages"
+	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegment"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... _mir_msgs_generate_messages_check_deps_Error"
+	@echo "... _mir_msgs_generate_messages_check_deps_Event"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... _mir_msgs_generate_messages_check_deps_ResourcesState"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... _mir_msgs_generate_messages_check_deps_Device"
-	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlState"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _mir_msgs_generate_messages_check_deps_Serial"
 	@echo "... _mir_msgs_generate_messages_check_deps_SafetyStatus"
 	@echo "... _mir_msgs_generate_messages_check_deps_Pendant"
+	@echo "... _mir_msgs_generate_messages_check_deps_JoystickVel"
 	@echo "... install/local"
 	@echo "... _mir_msgs_generate_messages_check_deps_WorldMap"
 	@echo "... _mir_msgs_generate_messages_check_deps_HeightState"
@@ -1250,6 +1164,12 @@ help:
 	@echo "... _mir_msgs_generate_messages_check_deps_Events"
 	@echo "... _mir_msgs_generate_messages_check_deps_Trolley"
 	@echo "... _mir_msgs_generate_messages_check_deps_Gpio"
+	@echo "... install/strip"
+	@echo "... _mir_msgs_generate_messages_check_deps_ChargingState"
+	@echo "... _mir_msgs_generate_messages_check_deps_Serial"
+	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlState"
+	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlCommand"
+	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegments"
 .PHONY : help
 
 

@@ -283,6 +283,214 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f human_detect/CMakeFiles/std_msgs_generate_messages_py.dir/build.make human_detect/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f human_detect/CMakeFiles/roscpp_generate_messages_py.dir/build.make human_detect/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f human_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make human_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f human_detect/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make human_detect/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f human_detect/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make human_detect/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f human_detect/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make human_detect/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f human_detect/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make human_detect/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f human_detect/CMakeFiles/roscpp_generate_messages_eus.dir/build.make human_detect/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f human_detect/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make human_detect/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f human_detect/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make human_detect/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f human_detect/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make human_detect/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f human_detect/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make human_detect/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f human_detect/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make human_detect/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f human_detect/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make human_detect/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f human_detect/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make human_detect/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named human_detect
+
+# Build rule for target.
+human_detect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 human_detect
+.PHONY : human_detect
+
+# fast build rule for target.
+human_detect/fast:
+	$(MAKE) -f human_detect/CMakeFiles/human_detect.dir/build.make human_detect/CMakeFiles/human_detect.dir/build
+.PHONY : human_detect/fast
+
+#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -439,43 +647,17 @@ _mir_msgs_generate_messages_check_deps_RobotStatus/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_RobotStatus/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_PlanSegments
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_IOs
 
 # Build rule for target.
-_mir_msgs_generate_messages_check_deps_PlanSegments: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_PlanSegments
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments
+_mir_msgs_generate_messages_check_deps_IOs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_IOs
+.PHONY : _mir_msgs_generate_messages_check_deps_IOs
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_PlanSegments/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlCommand: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_ChargingState
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_ChargingState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_ChargingState
-.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_ChargingState/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState/fast
+_mir_msgs_generate_messages_check_deps_IOs/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_IOs/fast
 
 #=============================================================================
 # Target rules for targets named _mir_msgs_generate_messages_check_deps_Twist2D
@@ -517,19 +699,6 @@ _mir_msgs_generate_messages_check_deps_BMSData/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_BMSData/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_Path
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_Path: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Path
-.PHONY : _mir_msgs_generate_messages_check_deps_Path
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Path/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Path/fast
-
-#=============================================================================
 # Target rules for targets named mir_msgs_geneus
 
 # Build rule for target.
@@ -556,238 +725,17 @@ _mir_msgs_generate_messages_check_deps_HookExtendedStatus/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_HookExtendedStatus/fast
 
 #=============================================================================
-# Target rules for targets named mir_msgs_genlisp
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_Path
 
 # Build rule for target.
-mir_msgs_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mir_msgs_genlisp
-.PHONY : mir_msgs_genlisp
+_mir_msgs_generate_messages_check_deps_Path: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Path
+.PHONY : _mir_msgs_generate_messages_check_deps_Path
 
 # fast build rule for target.
-mir_msgs_genlisp/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build
-.PHONY : mir_msgs_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_RobotState
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_RobotState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_RobotState
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_RobotState/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotState/fast
-
-#=============================================================================
-# Target rules for targets named mir_msgs_generate_messages
-
-# Build rule for target.
-mir_msgs_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mir_msgs_generate_messages
-.PHONY : mir_msgs_generate_messages
-
-# fast build rule for target.
-mir_msgs_generate_messages/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build
-.PHONY : mir_msgs_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_nodejs
-
-# Build rule for target.
-geometry_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_GripperState
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_GripperState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_GripperState
-.PHONY : _mir_msgs_generate_messages_check_deps_GripperState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_GripperState/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_GripperState/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_JoystickVel
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_JoystickVel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_JoystickVel
-.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_JoystickVel/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_ExternalRobot
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_ExternalRobot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_ExternalRobot
-.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_ExternalRobot/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_Proximity
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_Proximity: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Proximity
-.PHONY : _mir_msgs_generate_messages_check_deps_Proximity
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Proximity/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Proximity/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_LocalMapStat
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_LocalMapStat: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_LocalMapStat
-.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_LocalMapStat/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_BatteryCurrents
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_BatteryCurrents: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_BatteryCurrents
-.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_BatteryCurrents/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
-
-# Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_PlanSegment
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_PlanSegment: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_PlanSegment
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_PlanSegment/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_IOs
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_IOs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_IOs
-.PHONY : _mir_msgs_generate_messages_check_deps_IOs
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_IOs/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_IOs.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_IOs/fast
+_mir_msgs_generate_messages_check_deps_Path/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Path.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Path/fast
 
 #=============================================================================
 # Target rules for targets named _mir_msgs_generate_messages_check_deps_HookStatus
@@ -829,56 +777,108 @@ _mir_msgs_generate_messages_check_deps_MirStatus/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_MirStatus/fast
 
 #=============================================================================
-# Target rules for targets named mir_msgs_generate_messages_eus
+# Target rules for targets named mir_msgs_genlisp
 
 # Build rule for target.
-mir_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mir_msgs_generate_messages_eus
-.PHONY : mir_msgs_generate_messages_eus
+mir_msgs_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mir_msgs_genlisp
+.PHONY : mir_msgs_genlisp
 
 # fast build rule for target.
-mir_msgs_generate_messages_eus/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build
-.PHONY : mir_msgs_generate_messages_eus/fast
+mir_msgs_genlisp/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_genlisp.dir/build
+.PHONY : mir_msgs_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_RobotMode
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_RobotState
 
 # Build rule for target.
-_mir_msgs_generate_messages_check_deps_RobotMode: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_RobotMode
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode
+_mir_msgs_generate_messages_check_deps_RobotState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_RobotState
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotState
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_RobotMode/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode/fast
+_mir_msgs_generate_messages_check_deps_RobotState/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotState/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_Event
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
 
 # Build rule for target.
-_mir_msgs_generate_messages_check_deps_Event: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Event
-.PHONY : _mir_msgs_generate_messages_check_deps_Event
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Event/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Event/fast
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_Error
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_GripperState
 
 # Build rule for target.
-_mir_msgs_generate_messages_check_deps_Error: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Error
-.PHONY : _mir_msgs_generate_messages_check_deps_Error
+_mir_msgs_generate_messages_check_deps_GripperState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_GripperState
+.PHONY : _mir_msgs_generate_messages_check_deps_GripperState
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Error/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Error/fast
+_mir_msgs_generate_messages_check_deps_GripperState/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_GripperState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_GripperState/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_ExternalRobot
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_ExternalRobot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_ExternalRobot
+.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_ExternalRobot/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ExternalRobot.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_ExternalRobot/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_BatteryCurrents
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_BatteryCurrents: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_BatteryCurrents
+.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_BatteryCurrents/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BatteryCurrents.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_BatteryCurrents/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_BrakeState
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_BrakeState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_BrakeState
+.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_BrakeState/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_Encoders
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_Encoders: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Encoders
+.PHONY : _mir_msgs_generate_messages_check_deps_Encoders
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Encoders/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Encoders/fast
 
 #=============================================================================
 # Target rules for targets named _mir_msgs_generate_messages_check_deps_StampedEncoders
@@ -920,30 +920,134 @@ _mir_msgs_generate_messages_check_deps_Pose2D/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_Pose2D/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_Encoders
+# Target rules for targets named geometry_msgs_generate_messages_cpp
 
 # Build rule for target.
-_mir_msgs_generate_messages_check_deps_Encoders: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Encoders
-.PHONY : _mir_msgs_generate_messages_check_deps_Encoders
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Encoders/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Encoders.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Encoders/fast
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_BrakeState
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_Proximity
 
 # Build rule for target.
-_mir_msgs_generate_messages_check_deps_BrakeState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_BrakeState
-.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState
+_mir_msgs_generate_messages_check_deps_Proximity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Proximity
+.PHONY : _mir_msgs_generate_messages_check_deps_Proximity
 
 # fast build rule for target.
-_mir_msgs_generate_messages_check_deps_BrakeState/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_BrakeState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_BrakeState/fast
+_mir_msgs_generate_messages_check_deps_Proximity/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Proximity.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Proximity/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_LocalMapStat
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_LocalMapStat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_LocalMapStat
+.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_LocalMapStat/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_LocalMapStat.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_LocalMapStat/fast
+
+#=============================================================================
+# Target rules for targets named mir_msgs_generate_messages_eus
+
+# Build rule for target.
+mir_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mir_msgs_generate_messages_eus
+.PHONY : mir_msgs_generate_messages_eus
+
+# fast build rule for target.
+mir_msgs_generate_messages_eus/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages_eus.dir/build
+.PHONY : mir_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_RobotMode
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_RobotMode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_RobotMode
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_RobotMode/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_RobotMode.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_RobotMode/fast
+
+#=============================================================================
+# Target rules for targets named mir_msgs_generate_messages
+
+# Build rule for target.
+mir_msgs_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mir_msgs_generate_messages
+.PHONY : mir_msgs_generate_messages
+
+# fast build rule for target.
+mir_msgs_generate_messages/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build.make mir_robot/mir_msgs/CMakeFiles/mir_msgs_generate_messages.dir/build
+.PHONY : mir_msgs_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_PlanSegment
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_PlanSegment: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_PlanSegment
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_PlanSegment/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegment.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegment/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make mir_robot/mir_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_Error
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_Error: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Error
+.PHONY : _mir_msgs_generate_messages_check_deps_Error
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Error/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Error.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Error/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_Event
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_Event: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Event
+.PHONY : _mir_msgs_generate_messages_check_deps_Event
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Event/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Event.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Event/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_lisp
@@ -998,45 +1102,6 @@ _mir_msgs_generate_messages_check_deps_Device/fast:
 .PHONY : _mir_msgs_generate_messages_check_deps_Device/fast
 
 #=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_MissionCtrlState
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_MissionCtrlState
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_MissionCtrlState/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make mir_robot/mir_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named _mir_msgs_generate_messages_check_deps_Serial
-
-# Build rule for target.
-_mir_msgs_generate_messages_check_deps_Serial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Serial
-.PHONY : _mir_msgs_generate_messages_check_deps_Serial
-
-# fast build rule for target.
-_mir_msgs_generate_messages_check_deps_Serial/fast:
-	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build
-.PHONY : _mir_msgs_generate_messages_check_deps_Serial/fast
-
-#=============================================================================
 # Target rules for targets named _mir_msgs_generate_messages_check_deps_SafetyStatus
 
 # Build rule for target.
@@ -1061,6 +1126,19 @@ _mir_msgs_generate_messages_check_deps_Pendant: cmake_check_build_system
 _mir_msgs_generate_messages_check_deps_Pendant/fast:
 	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Pendant.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Pendant.dir/build
 .PHONY : _mir_msgs_generate_messages_check_deps_Pendant/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_JoystickVel
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_JoystickVel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_JoystickVel
+.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_JoystickVel/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_JoystickVel.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_JoystickVel/fast
 
 #=============================================================================
 # Target rules for targets named _mir_msgs_generate_messages_check_deps_WorldMap
@@ -1165,6 +1243,71 @@ _mir_msgs_generate_messages_check_deps_Gpio: cmake_check_build_system
 _mir_msgs_generate_messages_check_deps_Gpio/fast:
 	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Gpio.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Gpio.dir/build
 .PHONY : _mir_msgs_generate_messages_check_deps_Gpio/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_ChargingState
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_ChargingState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_ChargingState
+.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_ChargingState/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_ChargingState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_ChargingState/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_Serial
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_Serial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_Serial
+.PHONY : _mir_msgs_generate_messages_check_deps_Serial
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_Serial/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_Serial.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_Serial/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_MissionCtrlState
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_MissionCtrlState
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlState/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlState.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlState/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlCommand: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_MissionCtrlCommand.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_MissionCtrlCommand/fast
+
+#=============================================================================
+# Target rules for targets named _mir_msgs_generate_messages_check_deps_PlanSegments
+
+# Build rule for target.
+_mir_msgs_generate_messages_check_deps_PlanSegments: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _mir_msgs_generate_messages_check_deps_PlanSegments
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments
+
+# fast build rule for target.
+_mir_msgs_generate_messages_check_deps_PlanSegments/fast:
+	$(MAKE) -f mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build.make mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build
+.PHONY : _mir_msgs_generate_messages_check_deps_PlanSegments/fast
 
 #=============================================================================
 # Target rules for targets named sdc21x0_generate_messages_py
@@ -1373,136 +1516,6 @@ project_images: cmake_check_build_system
 project_images/fast:
 	$(MAKE) -f project_images/CMakeFiles/project_images.dir/build.make project_images/CMakeFiles/project_images.dir/build
 .PHONY : project_images/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f project_images/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make project_images/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
-
-# Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f project_images/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make project_images/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_eus
-
-# Build rule for target.
-roscpp_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	$(MAKE) -f project_images/CMakeFiles/roscpp_generate_messages_eus.dir/build.make project_images/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
-
-# Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f project_images/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make project_images/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f project_images/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make project_images/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f project_images/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make project_images/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f project_images/CMakeFiles/roscpp_generate_messages_py.dir/build.make project_images/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f project_images/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make project_images/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f project_images/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make project_images/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f project_images/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make project_images/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named _run_tests_mir_description_roslaunch-check
@@ -3476,6 +3489,22 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... human_detect"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... mir_msgs_genpy"
 	@echo "... mir_msgs_generate_messages_py"
@@ -3488,54 +3517,44 @@ help:
 	@echo "... _mir_msgs_generate_messages_check_deps_PowerBoardMotorStatus"
 	@echo "... _mir_msgs_generate_messages_check_deps_WebPath"
 	@echo "... _mir_msgs_generate_messages_check_deps_RobotStatus"
-	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegments"
-	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlCommand"
-	@echo "... _mir_msgs_generate_messages_check_deps_ChargingState"
+	@echo "... _mir_msgs_generate_messages_check_deps_IOs"
 	@echo "... _mir_msgs_generate_messages_check_deps_Twist2D"
 	@echo "... _mir_msgs_generate_messages_check_deps_MirExtra"
 	@echo "... _mir_msgs_generate_messages_check_deps_BMSData"
-	@echo "... _mir_msgs_generate_messages_check_deps_Path"
 	@echo "... mir_msgs_geneus"
 	@echo "... _mir_msgs_generate_messages_check_deps_HookExtendedStatus"
-	@echo "... mir_msgs_genlisp"
-	@echo "... _mir_msgs_generate_messages_check_deps_RobotState"
-	@echo "... mir_msgs_generate_messages"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... _mir_msgs_generate_messages_check_deps_GripperState"
-	@echo "... _mir_msgs_generate_messages_check_deps_JoystickVel"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... _mir_msgs_generate_messages_check_deps_ExternalRobot"
-	@echo "... _mir_msgs_generate_messages_check_deps_Proximity"
-	@echo "... _mir_msgs_generate_messages_check_deps_LocalMapStat"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... _mir_msgs_generate_messages_check_deps_BatteryCurrents"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegment"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... _mir_msgs_generate_messages_check_deps_IOs"
+	@echo "... _mir_msgs_generate_messages_check_deps_Path"
 	@echo "... _mir_msgs_generate_messages_check_deps_HookStatus"
 	@echo "... _mir_msgs_generate_messages_check_deps_Devices"
 	@echo "... _mir_msgs_generate_messages_check_deps_MirStatus"
-	@echo "... mir_msgs_generate_messages_eus"
-	@echo "... _mir_msgs_generate_messages_check_deps_RobotMode"
-	@echo "... _mir_msgs_generate_messages_check_deps_Event"
-	@echo "... _mir_msgs_generate_messages_check_deps_Error"
+	@echo "... mir_msgs_genlisp"
+	@echo "... _mir_msgs_generate_messages_check_deps_RobotState"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... _mir_msgs_generate_messages_check_deps_GripperState"
+	@echo "... _mir_msgs_generate_messages_check_deps_ExternalRobot"
+	@echo "... _mir_msgs_generate_messages_check_deps_BatteryCurrents"
+	@echo "... _mir_msgs_generate_messages_check_deps_BrakeState"
+	@echo "... _mir_msgs_generate_messages_check_deps_Encoders"
 	@echo "... _mir_msgs_generate_messages_check_deps_StampedEncoders"
 	@echo "... _mir_msgs_generate_messages_check_deps_WorldModel"
 	@echo "... _mir_msgs_generate_messages_check_deps_Pose2D"
-	@echo "... _mir_msgs_generate_messages_check_deps_Encoders"
-	@echo "... _mir_msgs_generate_messages_check_deps_BrakeState"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... _mir_msgs_generate_messages_check_deps_Proximity"
+	@echo "... _mir_msgs_generate_messages_check_deps_LocalMapStat"
+	@echo "... mir_msgs_generate_messages_eus"
+	@echo "... _mir_msgs_generate_messages_check_deps_RobotMode"
+	@echo "... mir_msgs_generate_messages"
+	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegment"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... _mir_msgs_generate_messages_check_deps_Error"
+	@echo "... _mir_msgs_generate_messages_check_deps_Event"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... _mir_msgs_generate_messages_check_deps_ResourcesState"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... _mir_msgs_generate_messages_check_deps_Device"
-	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlState"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _mir_msgs_generate_messages_check_deps_Serial"
 	@echo "... _mir_msgs_generate_messages_check_deps_SafetyStatus"
 	@echo "... _mir_msgs_generate_messages_check_deps_Pendant"
+	@echo "... _mir_msgs_generate_messages_check_deps_JoystickVel"
 	@echo "... _mir_msgs_generate_messages_check_deps_WorldMap"
 	@echo "... _mir_msgs_generate_messages_check_deps_HeightState"
 	@echo "... _mir_msgs_generate_messages_check_deps_ExternalRobots"
@@ -3544,6 +3563,11 @@ help:
 	@echo "... _mir_msgs_generate_messages_check_deps_Events"
 	@echo "... _mir_msgs_generate_messages_check_deps_Trolley"
 	@echo "... _mir_msgs_generate_messages_check_deps_Gpio"
+	@echo "... _mir_msgs_generate_messages_check_deps_ChargingState"
+	@echo "... _mir_msgs_generate_messages_check_deps_Serial"
+	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlState"
+	@echo "... _mir_msgs_generate_messages_check_deps_MissionCtrlCommand"
+	@echo "... _mir_msgs_generate_messages_check_deps_PlanSegments"
 	@echo "... sdc21x0_generate_messages_py"
 	@echo "... sdc21x0_gennodejs"
 	@echo "... sdc21x0_generate_messages_nodejs"
@@ -3560,16 +3584,6 @@ help:
 	@echo "... sdc21x0_generate_messages"
 	@echo "... sdc21x0_generate_messages_lisp"
 	@echo "... project_images"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... _run_tests_mir_description_roslaunch-check"
 	@echo "... clean_test_results_mir_description"
 	@echo "... run_tests_mir_description_roslaunch-check"

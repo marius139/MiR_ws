@@ -126,6 +126,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ros/MiR_ws/build/gtest/cmake_install.cmake")
+  include("/home/ros/MiR_ws/build/human_detect/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/mir_robot/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/realsense-ros/realsense2_description/cmake_install.cmake")
   include("/home/ros/MiR_ws/build/mir_robot/mir_msgs/cmake_install.cmake")

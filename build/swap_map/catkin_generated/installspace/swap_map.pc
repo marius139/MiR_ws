@@ -1,8 +1,0 @@
-prefix=/home/ros/MiR_ws/install
-
-Name: swap_map
-Description: Description of swap_map
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/ros/MiR_ws/install/lib 
-Requires: 

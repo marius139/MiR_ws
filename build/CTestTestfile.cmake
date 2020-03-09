@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(human_detect)
 subdirs(mir_robot/mir_robot)
 subdirs(realsense-ros/realsense2_description)
 subdirs(mir_robot/mir_msgs)
