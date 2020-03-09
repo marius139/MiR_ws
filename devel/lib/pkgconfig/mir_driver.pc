@@ -1,8 +1,0 @@
-prefix=/home/ros/MiR_ws/devel
-
-Name: mir_driver
-Description: Description of mir_driver
-Version: 1.0.4
-Cflags: 
-Libs: -L/home/ros/MiR_ws/devel/lib 
-Requires: actionlib_msgs diagnostic_msgs dynamic_reconfigure geometry_msgs mir_actions mir_msgs move_base_msgs nav_msgs rosgraph_msgs rospy_message_converter sensor_msgs std_msgs tf visualization_msgs
