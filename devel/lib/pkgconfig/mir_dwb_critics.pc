@@ -1,0 +1,8 @@
+prefix=/home/ros/MiR_ws/devel
+
+Name: mir_dwb_critics
+Description: Description of mir_dwb_critics
+Version: 1.0.4
+Cflags: -I/home/ros/MiR_ws/src/mir_robot/mir_dwb_critics/include
+Libs: -L/home/ros/MiR_ws/devel/lib -lmir_dwb_critics
+Requires: angles costmap_queue dwb_critics dwb_local_planner geometry_msgs nav_2d_msgs nav_2d_utils nav_core2 nav_grid_iterators pluginlib roscpp sensor_msgs

@@ -1,0 +1,24 @@
+(cl:in-package mir_msgs-msg)
+(cl:export '(PACK_VOLTAGE-VAL
+          PACK_VOLTAGE
+          CHARGE_CURRENT-VAL
+          CHARGE_CURRENT
+          DISCHARGE_CURRENT-VAL
+          DISCHARGE_CURRENT
+          STATE_OF_CHARGE-VAL
+          STATE_OF_CHARGE
+          REMAINING_TIME_TO_FULL_CHARGE-VAL
+          REMAINING_TIME_TO_FULL_CHARGE
+          REMAINING_CAPACITY-VAL
+          REMAINING_CAPACITY
+          STATE_OF_HEALTH-VAL
+          STATE_OF_HEALTH
+          STATUS_FLAGS-VAL
+          STATUS_FLAGS
+          TEMPERATURE-VAL
+          TEMPERATURE
+          CELL_VOLTAGE-VAL
+          CELL_VOLTAGE
+          LAST_BATTERY_MSG_TIME-VAL
+          LAST_BATTERY_MSG_TIME
+))
