@@ -5,10 +5,11 @@
 #include <tf/transform_listener.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <vector>
-
+#include <math.h>
+/*
 #include <boost/thread/condition.hpp>
 #include <boost/thread/mutex.hpp>
-#include <boost/scoped_ptr.hpp>
+#include <boost/scoped_ptr.hpp>*/
 
 //Libraries for RealSense
 #include <opencv2/core.hpp>
@@ -24,17 +25,22 @@
 #include <std_msgs/Int8.h>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
+typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> SimpleFeedbackCallback;
+/*Typedefs which could potentially be used for callback functions of sendGoal.
+//Action Feedback and Result from boots
+//typedef boost::shared_ptr< ::move_base_msgs::MoveBaseActionFeedback const > MoveBaseActionFeedbackConstPtr;
+//typedef boost::shared_ptr< ::move_base_msgs::MoveBaseActionResult const > MoveBaseActionResultConstPtr;
+//Action parameters from sendGoal function
 //typedef boost::function<void (const SimpleClientGoalState& state,  const ResultConstPtr& result) > SimpleDoneCallback;
 //typedef boost::function<void () > SimpleActiveCallback;
-//typedef boost::function <void (const FeedbackConstPtr& feedback) > SimpleFeedbackCallback;
+//typedef boost::function<void (const FeedbackConstPtr& feedback) > SimpleFeedbackCallback;
+*/
 
 cv_bridge::CvImagePtr cv_ptr;
 cv_bridge::CvImagePtr cv_ptrDep;
 
 
 geometry_msgs::Pose curPos;
-double curXpose;
-double curYpose;
 std::vector<geometry_msgs::PoseWithCovarianceStamped> previousPoints;
 
 
@@ -43,12 +49,16 @@ void onPoseSet(double x, double y, double theta);
 typedef boost::array<double, 36> array;
 array Covariance = {0.0};
 
+//Global variables
 int qtGo = 0;
 int curFloor = 0;
 int AGBR = 0;
 int door = 0;
 int maxSize = 50;
 int firstTime = 0;
+int traceBackActive = 0;
+double curXpose;
+double curYpose;
 
 //Declare functions
 void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, ros::Publisher pubSpeak,  MoveBaseClient& ac);
@@ -98,12 +108,6 @@ void ARDCallback(const std_msgs::Int8 msg){
 
 // CALLBACK - FOR onPoseSet
 void moveBaseCallback(const geometry_msgs::PoseWithCovarianceStamped msg){
-  if (curXpose-msg.pose.pose.position.x >= 0.05 || curXpose-msg.pose.pose.position.x <= -0.05 && curYpose-msg.pose.pose.position.y >= 0.05 || curYpose-msg.pose.pose.position.y){
-    previousPoints.push_back(msg);
-    if (previousPoints.size()>maxSize){
-      previousPoints.erase(previousPoints.begin());
-    }
-  }
   curXpose = msg.pose.pose.position.x;
   curYpose = msg.pose.pose.position.y;
 }
@@ -114,24 +118,25 @@ void CVCallback(const std_msgs::Int8 msg){
   AGBR = msg.data; //1 = human, 0 = object (AGBR = Anne-Grethe Bjarup Riis)
 }
 
-/*
+/*Callback functions which could be used for sendFual function. No good solution found
 // CALLBACK - Called once when the goal completes (ac.sendGoal)
 void doneCb(const actionlib::SimpleClientGoalState& state, const FibonacciResultConstPtr& result){
-  ROS_INFO("Finished in state [%s]", state.toString().c_str());
-  ROS_INFO("Answer: %i", result->sequence.back());
-  ros::shutdown();
+ROS_INFO("Finished in state [%s]", state.toString().c_str());
+ROS_INFO("Answer: %i", result->sequence.back());
+ros::shutdown();
 }
 
-*/
+
 // CALLBACK - Called once when the goal becomes active (ac.sendGoal)
 void activeCb(){
-  ROS_INFO("Goal just went active");
+ROS_INFO("Goal just went active");
 }
 
-/*
+
 // CALLBACK - Called every time feedback is received for the goal (ac.sendGoal)
 void feedbackCb(const MoveBaseClient::SimpleFeedbackCallback& feedback){
-  //ROS_INFO("Got Feedback of length %lu", feedback->sequence.size());
+//ROS_INFO("Got Feedback of length %lu", feedback->sequence.size());
+//ROS_INFO("[X]:%f [Y]:%f [W]: %f",feedback->base_position.pose.position.x,feedback->base_position.pose.position.y,feedback->base_position.pose.orientation.w);
 }
 */
 
@@ -160,12 +165,51 @@ void sendToSpeaker(int x, ros::Publisher pubSpeak){
   pubSpeak.publish(speakMessage);
 }
 
+/*
+//STORE POSITIONS along robot's path
+void storePosition(){
+  ros::spinOnce();
+  double storePosTimer;
+  if(ros::Time::now().toSec() - storePosTimer <= 0.5){
+    if (curXpose-msg.pose.pose.position.x >= 0.05 || curXpose-msg.pose.pose.position.x <= -0.05 && curYpose-msg.pose.pose.position.y >= 0.05 || curYpose-msg.pose.pose.position.y){
+      previousPoints.push_back(msg);
+      if (previousPoints.size()>maxSize){
+        previousPoints.erase(previousPoints.begin());
+      }
+    }
+    curXpose = msg.pose.pose.position.x;
+    curYpose = msg.pose.pose.position.y;
+    double storePosTimer = ros::Time::now().toSec();
+  }
+}*/
+
 
 //TRACE BACK xx meters
-void traceBack(){
+void traceBack(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
+  ac.cancelAllGoals();
+  double maxTraceBackDist = 2.5;
   firstTime = 0; //Reset variable
+  move_base_msgs::MoveBaseGoal start;
 
+  for(int i = 0 ; i<sizeof(previousPoints) ; i++){
+    start.target_pose.header.frame_id = "map";
+    start.target_pose.header.stamp = ros::Time::now();
+    start.target_pose.pose.position.x = previousPoints[sizeof(previousPoints)-i].pose.pose.position.x;
+    start.target_pose.pose.position.y = previousPoints[sizeof(previousPoints)-i].pose.pose.position.y;
+    start.target_pose.pose.orientation = previousPoints[sizeof(previousPoints)-i].pose.pose.orientation;
+    ac.sendGoal(start);
+    ac.waitForResult();
 
+    while(ac.getState() != actionlib::SimpleClientGoalState::SUCCEEDED ){
+      if (ac.getState() == actionlib::SimpleClientGoalState::ABORTED){
+        ROS_INFO("Problem  occured during recovery behaviour");
+      }
+    }
+    if(hypot((curXpose-previousPoints[sizeof(previousPoints)-i].pose.pose.position.x),(curYpose-previousPoints[sizeof(previousPoints)-i].pose.pose.position.y))>=maxTraceBackDist){
+      i = sizeof(previousPoints);
+      ROS_INFO("Traceback completed");
+    }
+  }
 }
 
 
@@ -187,7 +231,7 @@ void recoveryBehaviour(double x, double y, double rot, int button, ros::Publishe
     }
   }
   ROS_INFO("Initialising Trace Back method.");
-  traceBack();
+  traceBack(x, y, rot, button, pubArd, pubSpeak, ac);
 }
 
 
@@ -211,42 +255,46 @@ void moveToPoint(double x, double y, double rot, int button, ros::Publisher pubA
   tf::quaternionTFToMsg(quat, start.target_pose.pose.orientation);
   ros::Rate rate(1);
 
-  //ac.sendGoal(start, NULL, &activeCb, &feedbackCb);
-  //ac.sendGoal(start, MoveBaseClient::SimpleFeedbackCallback());
-  ac.waitForResult();
+  ac.sendGoal(start);
+  /*sendGoal with callback functions.
+  ac.sendGoal(start,
+  boost::bind(&doneCallback, _1, _2),
+  boost::bind(&activeCallback),
+  boost::bind(&feedbackCallback, _1));*/
 
   while(ac.getState() != actionlib::SimpleClientGoalState::SUCCEEDED ){
+    //In case path is blocked
     if (ac.getState() == actionlib::SimpleClientGoalState::ABORTED){
       ROS_INFO("ERROR: The path is blocked, initialising recovery behaviour.");
       recoveryBehaviour(x, y, rot, button, pubArd, pubSpeak, ac);
-
-      /*    OLD BRUTE FORCE BUTTONS
-      switch (button) {
-      case 1:
-      sendToArduino(7,pub1);
-      delaying(0.5);
-      break;
-
-      case 2:
-      sendToArduino(6,pub1);
-      delaying(0.5);
-      break;
-
-      default:
-      break;
     }
-    */
-  }
-  ac.sendGoal(start, NULL, NULL, NULL);
-  ac.waitForResult();
+    //While the robot is moving, store current positions in vector
+    //storePosition();
 
-  rate.sleep();
+    /*    OLD BRUTE FORCE BUTTONS
+    switch (button) {
+    case 1:
+    sendToArduino(7,pub1);
+    delaying(0.5);
+    break;
+
+    case 2:
+    sendToArduino(6,pub1);
+    delaying(0.5);
+    break;
+
+    default:
+    break;
+  }
+  */
 }
 
 //actionlib::SimpleClientGoalState state = ac.getState();
 //ROS_INFO("Action state: %s", state.toString().c_str() );
 //ac.stopTrackingGoal();
 //ac.cancelAllGoals();
+
+
 firstTime = 0; //Reset variable
 ROS_INFO("Hooray, the base moved to position");
 }
