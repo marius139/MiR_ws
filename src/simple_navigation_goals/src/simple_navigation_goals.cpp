@@ -59,6 +59,8 @@ int firstTime = 0;
 int traceBackActive = 0;
 double curXpose;
 double curYpose;
+double curXposePrev;
+double curYposePrev;
 
 //Declare functions
 void moveToPoint(double x, double y, double rot, int button, ros::Publisher pub1, ros::Publisher pubSpeak,  MoveBaseClient& ac);
@@ -165,7 +167,7 @@ void sendToSpeaker(int x, ros::Publisher pubSpeak){
   pubSpeak.publish(speakMessage);
 }
 
-/*
+
 //STORE POSITIONS along robot's path
 void storePosition(){
   ros::spinOnce();
@@ -177,11 +179,11 @@ void storePosition(){
         previousPoints.erase(previousPoints.begin());
       }
     }
-    curXpose = msg.pose.pose.position.x;
-    curYpose = msg.pose.pose.position.y;
+    curXposePrev = msg.pose.pose.position.x;
+    curYposePrev = msg.pose.pose.position.y;
     double storePosTimer = ros::Time::now().toSec();
   }
-}*/
+}
 
 
 //TRACE BACK xx meter s
