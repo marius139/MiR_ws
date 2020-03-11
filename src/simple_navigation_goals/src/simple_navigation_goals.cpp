@@ -184,7 +184,7 @@ void storePosition(){
 }*/
 
 
-//TRACE BACK xx meters
+//TRACE BACK xx meter s
 void traceBack(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
   ac.cancelAllGoals();
   double maxTraceBackDist = 2.5;
