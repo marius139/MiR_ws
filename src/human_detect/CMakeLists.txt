@@ -7,9 +7,22 @@ project(human_detect)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
+find_package( catkin REQUIRED COMPONENTS
+  actionlib
+  move_base_msgs
   roscpp
+  tf
+  geometry_msgs
+  people_msgs
+
+# For RealSense camera
+  sensor_msgs
+  cv_bridge
   std_msgs
+  image_transport
+
+# Sound
+  sound_play
 )
 
 ## System dependencies are found with CMake's conventions

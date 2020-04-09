@@ -2,12 +2,20 @@
 
 //Libraries for openCV
 #include <sstream>
+#include <vector>
+#include <math.h>
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/core.hpp>
+
 #include <image_transport/image_transport.h>
 #include <cv_bridge/cv_bridge.h>
 #include <sensor_msgs/image_encodings.h>
+#include <tf/transform_listener.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
+
+#include "people_msgs/People.h"
+
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
@@ -25,6 +33,77 @@ const std::string desPath = "/home/ros/MiR_ws/src/human_detect/src/";
 const std::string resources = "/home/ros/MiR_ws/src/simple_navigation_goals/src/resources/";
 const int nrMatches = 10;
 
+cv_bridge::CvImagePtr cv_ptr;
+cv_bridge::CvImagePtr cv_ptrDep;
+double curXpose;
+double curYpose;
+
+void imageCallback(const sensor_msgs::ImageConstPtr msg){
+  try
+  {
+    cv_ptr = cv_bridge::toCvCopy(*msg, sensor_msgs::image_encodings::BGR8);
+  }
+  catch (cv_bridge::Exception& e)
+  {
+    ROS_ERROR("cv_bridge exception: %s", e.what());
+    return;
+  }
+}
+
+void depthCallback(const sensor_msgs::ImageConstPtr msg){
+  try
+  {
+    cv_ptrDep = cv_bridge::toCvCopy(*msg, sensor_msgs::image_encodings::TYPE_16UC1);
+  }
+  catch (cv_bridge::Exception& e)
+  {
+    ROS_ERROR("cv_bridge exception: %s", e.what());
+    return;
+  }
+}
+
+cv::Mat getImage() {
+  cv::Mat img = cv::Mat(100,100, CV_8UC3); //RGB
+  ros::Time tid = ros::Time::now()+ros::Duration(5.0);
+  while (ros::ok()) {
+    if(ros::Time::now()>tid){
+      ROS_INFO("Did not get image. Abandonning");
+      return img;
+    }
+    ros::spinOnce();
+    if(cv_ptr){
+      img = cv::Mat(cv_ptr->image.rows, cv_ptr->image.cols, CV_8UC3);
+      img = cv_ptr->image;
+      cv_ptr.reset();
+      return img;
+    }
+  }
+  return img;
+}
+
+cv::Mat getDepthImage() {
+  cv::Mat imgD = cv::Mat(100,100, CV_16UC1); //Depth
+  ros::Time tidD = ros::Time::now()+ros::Duration(5.0);
+  while (ros::ok()) {
+    if(ros::Time::now()>tidD){
+      ROS_INFO("Did not get image. Abandonning");
+      return imgD;
+    }
+    ros::spinOnce();
+    if(cv_ptrDep){
+      imgD = cv::Mat(cv_ptrDep->image.rows, cv_ptrDep->image.cols, CV_16UC1);
+      imgD = cv_ptrDep->image;
+      cv_ptrDep.reset();
+      return imgD;
+    }
+  }
+  return imgD;
+}
+
+void moveBaseCallback(const geometry_msgs::PoseWithCovarianceStamped msg){
+  curXpose = msg.pose.pose.position.x;
+  curYpose = msg.pose.pose.position.y;
+}
 
 void hogDetect(){
   /// Create a videoreader interface
@@ -214,19 +293,35 @@ void siftMatch(){
 
 }
 
+void sendPeople(){
+  //Send people message
+}
+
+std::vector<float> calTransform(){
+  //apply transform from camera to person, return position of person on global map
+}
 
 int main(int argc, char** argv){
 
   ros::init(argc, argv, "human_detect");
   ros::NodeHandle nh1;
-
-  while(ros::ok()){
-    
-  }
-
+  ROS_INFO("Version: %i.%i", CV_MAJOR_VERSION,CV_MINOR_VERSION);
   //Subscribe to camera rgb image
-  //ros::Subscriber image_sub_ = nh1.subscribe("/camera/color/image_raw", 1,imageCallback);
- ROS_INFO("Version: %i . %i", CV_MAJOR_VERSION,CV_MINOR_VERSION);
+  ros::Subscriber image_sub_ = nh1.subscribe("/camera/color/image_raw", 1,imageCallback);
+  //Subscribe to camera depth
+  ros::Subscriber depth_sub_ = nh1.subscribe("/camera/depth/image_rect_raw", 1,depthCallback);
+  //Subscribe to the mir platform current position in the map
+  ros::Subscriber sub_pose = nh1.subscribe<geometry_msgs::PoseWithCovarianceStamped>("/amcl_pose", 10, moveBaseCallback);
+  //People message publisher
+  ros::Publisher pubCV = nh1.advertise<people_msgs::People> ("/personPosition", 100);
+
+/*
+  while(ros::ok()){
+
+    ros::spinOnce();
+
+  }
+*/
 
   //SIFTfeatureExstract();
 
