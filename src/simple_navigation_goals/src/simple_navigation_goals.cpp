@@ -167,7 +167,7 @@ void sendToSpeaker(int x, ros::Publisher pubSpeak){
   pubSpeak.publish(speakMessage);
 }
 
-
+/*
 //STORE POSITIONS along robot's path
 void storePosition(){
   ros::spinOnce();
@@ -185,7 +185,7 @@ void storePosition(){
   }
 }
 
-
+*/
 //TRACE BACK xx meter s
 void traceBack(double x, double y, double rot, int button, ros::Publisher pubArd, ros::Publisher pubSpeak,  MoveBaseClient& ac){
   ac.cancelAllGoals();
