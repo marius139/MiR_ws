@@ -1,0 +1,38 @@
+# CMake generated Testfile for 
+# Source directory: /home/ros/neo_ws/src
+# Build directory: /home/ros/neo_ws/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("navigation/navigation")
+subdirs("navigation_layers/navigation_layers")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_bringup")
+subdirs("navigation_layers/people/people")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_msgs")
+subdirs("navigation_layers/people/people_msgs")
+subdirs("navigation/map_server")
+subdirs("updated_neobotix_stack/neobotix_mp_655/cob_sick_s300")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_relayboard")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_teleop")
+subdirs("updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff")
+subdirs("navigation/amcl")
+subdirs("navigation/fake_localization")
+subdirs("navigation/voxel_grid")
+subdirs("navigation/costmap_2d")
+subdirs("navigation/nav_core")
+subdirs("navigation/base_local_planner")
+subdirs("navigation/carrot_planner")
+subdirs("navigation/clear_costmap_recovery")
+subdirs("navigation/dwa_local_planner")
+subdirs("navigation/move_slow_and_clear")
+subdirs("navigation/navfn")
+subdirs("navigation/global_planner")
+subdirs("navigation_layers/range_sensor_layer")
+subdirs("navigation/rotate_recovery")
+subdirs("navigation/move_base")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_2dnav")
+subdirs("navigation_layers/social_navigation_layers")
+subdirs("updated_neobotix_stack/neobotix_mp_655/neo_description")
+subdirs("updated_neobotix_stack/neo_simulations/neo_gazebo")

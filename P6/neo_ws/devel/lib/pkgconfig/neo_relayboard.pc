@@ -1,0 +1,8 @@
+prefix=/home/ros/neo_ws/devel
+
+Name: neo_relayboard
+Description: Description of neo_relayboard
+Version: 0.1.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

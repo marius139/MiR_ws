@@ -1,0 +1,62 @@
+TebLocalPlannerROS:
+ # The underlying method called Timed Elastic Band locally optimizes the
+ # robot's trajectory with respect to trajectory execution time, separation
+ # from obstacles and compliance with kinodynamic constraints at runtime.
+ # See all parameters and default values here:
+ # http://wiki.ros.org/teb_local_planner
+
+
+  # Miscellaneous
+  odom_topic: odom
+  map_frame: map
+
+  # Robot Configuration
+  max_vel_theta: 0.3
+  max_vel_x: 0.4
+  max_vel_x_backwards: 0.2
+
+  footprint_model:
+   type: "circular"
+   radius: 0.55 # for type "circular"
+
+  # Trajectory Configuration
+  dt_ref: 0.5
+
+  # Obstacle
+  min_obstacle_dist: 0.55  # Default 0.5 (set according to size of robot)
+  inflation_dist: 1.08     # Default 0.6
+  obstacle_poses_affected: 10
+  #include_dynamic_obstacles: true
+
+  # Optimization
+  no_inner_iterations: 3
+  no_outer_iterations: 2
+  penalty_epsilon: 0.1
+  weight_obstacle: 10
+  #weight_kinematics_nh: 0
+  weight_optimaltime: 0.1
+  weight_inflation: 0.2
+  #weight_adapt_factor: 10
+
+  # Parallel planning
+  enable_homotopy_class_planning: true
+  max_number_classes: 2 
+  max_global_plan_lookahead_dist: 5 #Fit this to detectable range of vision
+
+
+  ## Costmap converter plugin  
+  costmap_converter_spin_thread: true
+  costmap_converter_rate: 10
+  costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSMCCH"
+  #costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSRANSAC"
+  #costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSMCCH"
+  #costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSConcaveHull"
+  #costmap_converter_plugin: "" # deactivate plugin
+
+  ## Configure plugins (namespace move_base/TebLocalPlannerROS/PLUGINNAME)
+  ## The parameters must be added for each plugin separately
+  costmap_converter/CostmapToPolygonsDBSMCCH:
+   cluster_max_distance: 1  #Should this be 1.08?? Does it make a differnece?
+   cluster_min_pts: 2
+   cluster_max_pts: 30
+   convex_hull_pt_separation: 0.1
