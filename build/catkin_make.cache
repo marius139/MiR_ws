@@ -1,2 +1,0 @@
-mir_robot/mir_actions:mir_robot/mir_description:mir_robot/mir_driver:mir_robot/mir_dwb_critics:mir_robot/mir_gazebo:mir_robot/mir_msgs:mir_robot/mir_navigation:mir_robot/mir_robot:mir_robot/sdc21x0:project_images:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:simple_navigation_goals
--DCATKIN_DEVEL_PREFIX=/home/ros/MiR_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ros/MiR_ws/install -G Unix Makefiles

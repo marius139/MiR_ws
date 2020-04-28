@@ -1,8 +1,0 @@
-prefix=/home/ros/MiR_ws/devel
-
-Name: mir_msgs
-Description: Description of mir_msgs
-Version: 1.0.4
-Cflags: -I/home/ros/MiR_ws/devel/include
-Libs: -L/home/ros/MiR_ws/devel/lib 
-Requires: message_runtime geometry_msgs

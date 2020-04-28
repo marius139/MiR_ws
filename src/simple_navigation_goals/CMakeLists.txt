@@ -18,8 +18,9 @@ find_package( catkin REQUIRED COMPONENTS
   roscpp
   tf
   geometry_msgs
+  people_msgs
 
-# For RealSense camera 
+# For RealSense camera
   sensor_msgs
   cv_bridge
   std_msgs
@@ -226,5 +227,3 @@ find_package(OpenCV 3 REQUIRED)
 add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
 target_link_libraries(simple_navigation_goals ${OpenCV_LIBS})
-
-

@@ -10,7 +10,7 @@
 #include <sound_play/sound_play.h>
 #include <unistd.h>
 
-//Path to resources 
+//Path to resources
 const std::string resources = "/home/ros/MiR_ws/src/simple_navigation_goals/src/resources/";
 //window name
 std::string name = "view";
