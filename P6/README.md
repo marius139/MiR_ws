@@ -1,9 +1,13 @@
 <!-- Use this link https://pandao.github.io/editor.md/en.html## to edit the README -->
 ## Requirements
 - Gazebo 9.1 or higher is required for collision on actor to work. Click [here](#Installation-of-Gazebo-13)  for installation guide.
-- If the plugin does not load, paste this into the terminal (insert part to workspace yourself): `export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:{ws_path}/actor_collisions/build`
 
+## Plugin
+The plugin should be installed when downloading the repository. To tell Gazebo where to find the plugin, insert this line to the terminal (with your own workspace path instead of `{ws_path}`) 
 
+`echo 'export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:{ws_path}/actor_collisions/build' >> ~/.bashrc `
+
+Restart the terminal or run this command `. ~/.bashrc` 
 
 
 ## Installation of Gazebo 13
