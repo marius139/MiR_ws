@@ -1,6 +1,6 @@
 ## Prerequisites
 - **Ubuntu 18.04 with Melodic ROS distribution** is required for installation of Gazebo 9.1 or higher. Click [here](http://http://releases.ubuntu.com/18.04.4/?_ga=2.30273727.1896459521.1588157994-1099108351.1588060257 "here") for Ubuntu 18.04 installation guide. Click [here](http://http://wiki.ros.org/melodic/Installation/Ubuntu "here") for ROS installation guide for Melodic.
-- **Gazebo 9.1 or higher ** is required for collision on actor to work. Click [here](#Installation-of-Gazebo-13)  for installation guide.
+- **Gazebo 9.1 or higher** is required for collision on actor to work. Click [here](#Installation-of-Gazebo-13)  for installation guide.
 - **teb_local_planner** package is required to effectively use it as local planner.  Click [here](#Installation-of-teb_local_planner)  for installation guide.
 
 ## Simulation of Navigation Stack (Navigation)
