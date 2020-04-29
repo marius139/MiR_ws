@@ -22,7 +22,7 @@ roslaunch neo_gazebo {launch_file_name}
 roslaunch neo_gazebo {launch_file_name}
 ```
 
-- Launch Navigation Stack 
+- Launch SLAM
 ```c
     roslaunch neo_2dnav nav2dslam.launch
 ```
