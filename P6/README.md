@@ -2,7 +2,7 @@
 ## Requirements
 - Gazebo 9.1 or higher is required for collision on actor to work. Click [here](#Installation-of-Gazebo-13)  for installation guide.
 
-## Plugin
+## Collisions Plugin
 The plugin should be installed when downloading the repository. To tell Gazebo where to find the plugin, insert this line to the terminal (with your own workspace path instead of `{ws_path}`) 
 
 `echo 'export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:{ws_path}/actor_collisions/build' >> ~/.bashrc `
