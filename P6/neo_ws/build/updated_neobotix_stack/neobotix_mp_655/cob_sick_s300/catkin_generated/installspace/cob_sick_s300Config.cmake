@@ -67,7 +67,7 @@ set(cob_sick_s300_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(cob_sick_s300_SOURCE_PREFIX /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300)
+  set(cob_sick_s300_SOURCE_PREFIX /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300)
   set(cob_sick_s300_DEVEL_PREFIX /home/ros/neo_ws/devel)
   set(cob_sick_s300_INSTALL_PREFIX "")
   set(cob_sick_s300_PREFIX ${cob_sick_s300_DEVEL_PREFIX})

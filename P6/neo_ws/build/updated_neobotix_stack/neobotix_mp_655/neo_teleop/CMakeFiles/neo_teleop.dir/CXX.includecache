@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp
 ros/ros.h
 -
 sensor_msgs/Joy.h

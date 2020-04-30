@@ -49,36 +49,36 @@ CMAKE_SOURCE_DIR = /home/ros/neo_ws/src
 CMAKE_BINARY_DIR = /home/ros/neo_ws/build
 
 # Include any dependencies generated for this target.
-include Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/depend.make
+include updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/depend.make
 
 # Include the progress variables for this target.
-include Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/progress.make
+include updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/flags.make
+include updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/flags.make
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/flags.make
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o -c /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/flags.make
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o"
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o -c /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp > CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp > CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp -o CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/src/neo_teleop.cpp -o CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires:
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires:
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires
-	$(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides.build
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires
+	$(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides.build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides.build: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.provides.build: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o
 
 
 # Object files for target neo_teleop
@@ -88,8 +88,8 @@ neo_teleop_OBJECTS = \
 # External object files for target neo_teleop
 neo_teleop_EXTERNAL_OBJECTS =
 
-/home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o
-/home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make
+/home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o
+/home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make
 /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: /opt/ros/melodic/lib/libroscpp.so
 /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: /opt/ros/melodic/lib/librosconsole.so
@@ -108,24 +108,24 @@ neo_teleop_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/link.txt
+/home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neo_teleop.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neo_teleop.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build: /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build: /home/ros/neo_ws/devel/lib/neo_teleop/neo_teleop
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/requires: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/requires: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o.requires
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/requires
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/clean:
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop && $(CMAKE_COMMAND) -P CMakeFiles/neo_teleop.dir/cmake_clean.cmake
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/clean
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/clean:
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop && $(CMAKE_COMMAND) -P CMakeFiles/neo_teleop.dir/cmake_clean.cmake
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/clean
 
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/depend:
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/neo_ws/src /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop /home/ros/neo_ws/build /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/depend
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/depend:
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/neo_ws/src /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop /home/ros/neo_ws/build /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/depend
 

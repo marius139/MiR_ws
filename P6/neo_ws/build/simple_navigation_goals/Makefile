@@ -68,6 +68,30 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -100,18 +124,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -122,18 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,66 +166,6 @@ preinstall/fast:
 depend:
 	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule
-
-# Convenience name for target.
-simple_navigation_goals: simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule
-
-.PHONY : simple_navigation_goals
-
-# fast build rule for target.
-simple_navigation_goals/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build
-.PHONY : simple_navigation_goals/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sound_play_generate_messages_nodejs: simple_navigation_goals/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
-
-.PHONY : sound_play_generate_messages_nodejs
-
-# fast build rule for target.
-sound_play_generate_messages_nodejs/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/sound_play_generate_messages_nodejs.dir/build.make simple_navigation_goals/CMakeFiles/sound_play_generate_messages_nodejs.dir/build
-.PHONY : sound_play_generate_messages_nodejs/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/sound_play_generate_messages_lisp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sound_play_generate_messages_lisp: simple_navigation_goals/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
-
-.PHONY : sound_play_generate_messages_lisp
-
-# fast build rule for target.
-sound_play_generate_messages_lisp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/sound_play_generate_messages_lisp.dir/build.make simple_navigation_goals/CMakeFiles/sound_play_generate_messages_lisp.dir/build
-.PHONY : sound_play_generate_messages_lisp/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/sound_play_generate_messages_eus.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/sound_play_generate_messages_eus.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/sound_play_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sound_play_generate_messages_eus: simple_navigation_goals/CMakeFiles/sound_play_generate_messages_eus.dir/rule
-
-.PHONY : sound_play_generate_messages_eus
-
-# fast build rule for target.
-sound_play_generate_messages_eus/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/sound_play_generate_messages_eus.dir/build.make simple_navigation_goals/CMakeFiles/sound_play_generate_messages_eus.dir/build
-.PHONY : sound_play_generate_messages_eus/fast
 
 # Convenience name for target.
 simple_navigation_goals/CMakeFiles/actionlib_generate_messages_py.dir/rule:
@@ -333,19 +273,19 @@ move_base_msgs_generate_messages_eus/fast:
 .PHONY : move_base_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-simple_navigation_goals/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/tf_generate_messages_py.dir/rule
+simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule
+.PHONY : simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule
 
 # Convenience name for target.
-tf_generate_messages_py: simple_navigation_goals/CMakeFiles/tf_generate_messages_py.dir/rule
+simple_navigation_goals: simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/rule
 
-.PHONY : tf_generate_messages_py
+.PHONY : simple_navigation_goals
 
 # fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/tf_generate_messages_py.dir/build.make simple_navigation_goals/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
+simple_navigation_goals/fast:
+	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build
+.PHONY : simple_navigation_goals/fast
 
 # Convenience name for target.
 simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
@@ -378,21 +318,6 @@ move_base_msgs_generate_messages_nodejs/fast:
 .PHONY : move_base_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-simple_navigation_goals/CMakeFiles/sound_play_generate_messages_py.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/sound_play_generate_messages_py.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/sound_play_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sound_play_generate_messages_py: simple_navigation_goals/CMakeFiles/sound_play_generate_messages_py.dir/rule
-
-.PHONY : sound_play_generate_messages_py
-
-# fast build rule for target.
-sound_play_generate_messages_py/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/sound_play_generate_messages_py.dir/build.make simple_navigation_goals/CMakeFiles/sound_play_generate_messages_py.dir/build
-.PHONY : sound_play_generate_messages_py/fast
-
-# Convenience name for target.
 simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
 	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
 .PHONY : simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
@@ -406,81 +331,6 @@ move_base_msgs_generate_messages_py: simple_navigation_goals/CMakeFiles/move_bas
 move_base_msgs_generate_messages_py/fast:
 	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
 .PHONY : move_base_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/tf_generate_messages_eus.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_eus: simple_navigation_goals/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-.PHONY : tf_generate_messages_eus
-
-# fast build rule for target.
-tf_generate_messages_eus/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/tf_generate_messages_eus.dir/build.make simple_navigation_goals/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_cpp: simple_navigation_goals/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-.PHONY : tf_generate_messages_cpp
-
-# fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/tf_generate_messages_cpp.dir/build.make simple_navigation_goals/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/sound_play_generate_messages_cpp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sound_play_generate_messages_cpp: simple_navigation_goals/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
-
-.PHONY : sound_play_generate_messages_cpp
-
-# fast build rule for target.
-sound_play_generate_messages_cpp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/sound_play_generate_messages_cpp.dir/build.make simple_navigation_goals/CMakeFiles/sound_play_generate_messages_cpp.dir/build
-.PHONY : sound_play_generate_messages_cpp/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_lisp: simple_navigation_goals/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/tf_generate_messages_lisp.dir/build.make simple_navigation_goals/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-# Convenience name for target.
-simple_navigation_goals/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-.PHONY : simple_navigation_goals/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_nodejs: simple_navigation_goals/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-.PHONY : tf_generate_messages_nodejs
-
-# fast build rule for target.
-tf_generate_messages_nodejs/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/tf_generate_messages_nodejs.dir/build.make simple_navigation_goals/CMakeFiles/tf_generate_messages_nodejs.dir/build
-.PHONY : tf_generate_messages_nodejs/fast
 
 src/simple_navigation_goals.o: src/simple_navigation_goals.cpp.o
 
@@ -516,33 +366,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... simple_navigation_goals"
-	@echo "... sound_play_generate_messages_nodejs"
-	@echo "... sound_play_generate_messages_lisp"
-	@echo "... sound_play_generate_messages_eus"
+	@echo "... install/local"
 	@echo "... actionlib_generate_messages_py"
+	@echo "... install"
 	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... list_install_components"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... tf_generate_messages_py"
+	@echo "... simple_navigation_goals"
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... move_base_msgs_generate_messages_nodejs"
-	@echo "... sound_play_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... install"
-	@echo "... tf_generate_messages_eus"
-	@echo "... tf_generate_messages_cpp"
+	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... sound_play_generate_messages_cpp"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... install/local"
-	@echo "... tf_generate_messages_nodejs"
 	@echo "... src/simple_navigation_goals.o"
 	@echo "... src/simple_navigation_goals.i"
 	@echo "... src/simple_navigation_goals.s"

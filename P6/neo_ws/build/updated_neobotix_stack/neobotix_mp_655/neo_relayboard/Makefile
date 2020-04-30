@@ -137,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/progress.marks
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/all
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/progress.marks
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/clean
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,12 +154,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -168,123 +168,123 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule
 
 # Convenience name for target.
-neo_relayboard_node: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule
+neo_relayboard_node: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/rule
 
 .PHONY : neo_relayboard_node
 
 # fast build rule for target.
 neo_relayboard_node/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build
 .PHONY : neo_relayboard_node/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule
 
 # Convenience name for target.
-neo_relayboard: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule
+neo_relayboard: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/rule
 
 .PHONY : neo_relayboard
 
 # fast build rule for target.
 neo_relayboard/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build
 .PHONY : neo_relayboard/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_eus: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+trajectory_msgs_generate_messages_eus: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 .PHONY : trajectory_msgs_generate_messages_eus
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_eus/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_cpp: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+trajectory_msgs_generate_messages_cpp: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : trajectory_msgs_generate_messages_cpp
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_nodejs: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+trajectory_msgs_generate_messages_nodejs: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 .PHONY : trajectory_msgs_generate_messages_nodejs
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_lisp: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+trajectory_msgs_generate_messages_lisp: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 .PHONY : trajectory_msgs_generate_messages_lisp
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_py: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+trajectory_msgs_generate_messages_py: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 .PHONY : trajectory_msgs_generate_messages_py
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule
 
 # Convenience name for target.
-SerialIO: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule
+SerialIO: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/rule
 
 .PHONY : SerialIO
 
 # fast build rule for target.
 SerialIO/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build
 .PHONY : SerialIO/fast
 
 common/src/SerRelayBoard.o: common/src/SerRelayBoard.cpp.o
@@ -293,7 +293,7 @@ common/src/SerRelayBoard.o: common/src/SerRelayBoard.cpp.o
 
 # target to build an object file
 common/src/SerRelayBoard.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o
 .PHONY : common/src/SerRelayBoard.cpp.o
 
 common/src/SerRelayBoard.i: common/src/SerRelayBoard.cpp.i
@@ -302,7 +302,7 @@ common/src/SerRelayBoard.i: common/src/SerRelayBoard.cpp.i
 
 # target to preprocess a source file
 common/src/SerRelayBoard.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i
 .PHONY : common/src/SerRelayBoard.cpp.i
 
 common/src/SerRelayBoard.s: common/src/SerRelayBoard.cpp.s
@@ -311,7 +311,7 @@ common/src/SerRelayBoard.s: common/src/SerRelayBoard.cpp.s
 
 # target to generate assembly for a file
 common/src/SerRelayBoard.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s
 .PHONY : common/src/SerRelayBoard.cpp.s
 
 common/src/SerialIO.o: common/src/SerialIO.cpp.o
@@ -320,7 +320,7 @@ common/src/SerialIO.o: common/src/SerialIO.cpp.o
 
 # target to build an object file
 common/src/SerialIO.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/common/src/SerialIO.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/common/src/SerialIO.cpp.o
 .PHONY : common/src/SerialIO.cpp.o
 
 common/src/SerialIO.i: common/src/SerialIO.cpp.i
@@ -329,7 +329,7 @@ common/src/SerialIO.i: common/src/SerialIO.cpp.i
 
 # target to preprocess a source file
 common/src/SerialIO.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/common/src/SerialIO.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/common/src/SerialIO.cpp.i
 .PHONY : common/src/SerialIO.cpp.i
 
 common/src/SerialIO.s: common/src/SerialIO.cpp.s
@@ -338,7 +338,7 @@ common/src/SerialIO.s: common/src/SerialIO.cpp.s
 
 # target to generate assembly for a file
 common/src/SerialIO.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/common/src/SerialIO.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/SerialIO.dir/common/src/SerialIO.cpp.s
 .PHONY : common/src/SerialIO.cpp.s
 
 common/src/StrUtil.o: common/src/StrUtil.cpp.o
@@ -347,7 +347,7 @@ common/src/StrUtil.o: common/src/StrUtil.cpp.o
 
 # target to build an object file
 common/src/StrUtil.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o
 .PHONY : common/src/StrUtil.cpp.o
 
 common/src/StrUtil.i: common/src/StrUtil.cpp.i
@@ -356,7 +356,7 @@ common/src/StrUtil.i: common/src/StrUtil.cpp.i
 
 # target to preprocess a source file
 common/src/StrUtil.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i
 .PHONY : common/src/StrUtil.cpp.i
 
 common/src/StrUtil.s: common/src/StrUtil.cpp.s
@@ -365,7 +365,7 @@ common/src/StrUtil.s: common/src/StrUtil.cpp.s
 
 # target to generate assembly for a file
 common/src/StrUtil.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s
 .PHONY : common/src/StrUtil.cpp.s
 
 common/src/neo_relayboard_lib.o: common/src/neo_relayboard_lib.cpp.o
@@ -374,7 +374,7 @@ common/src/neo_relayboard_lib.o: common/src/neo_relayboard_lib.cpp.o
 
 # target to build an object file
 common/src/neo_relayboard_lib.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o
 .PHONY : common/src/neo_relayboard_lib.cpp.o
 
 common/src/neo_relayboard_lib.i: common/src/neo_relayboard_lib.cpp.i
@@ -383,7 +383,7 @@ common/src/neo_relayboard_lib.i: common/src/neo_relayboard_lib.cpp.i
 
 # target to preprocess a source file
 common/src/neo_relayboard_lib.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i
 .PHONY : common/src/neo_relayboard_lib.cpp.i
 
 common/src/neo_relayboard_lib.s: common/src/neo_relayboard_lib.cpp.s
@@ -392,7 +392,7 @@ common/src/neo_relayboard_lib.s: common/src/neo_relayboard_lib.cpp.s
 
 # target to generate assembly for a file
 common/src/neo_relayboard_lib.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s
 .PHONY : common/src/neo_relayboard_lib.cpp.s
 
 src/neo_relayboard_node.o: src/neo_relayboard_node.cpp.o
@@ -401,7 +401,7 @@ src/neo_relayboard_node.o: src/neo_relayboard_node.cpp.o
 
 # target to build an object file
 src/neo_relayboard_node.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/src/neo_relayboard_node.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/src/neo_relayboard_node.cpp.o
 .PHONY : src/neo_relayboard_node.cpp.o
 
 src/neo_relayboard_node.i: src/neo_relayboard_node.cpp.i
@@ -410,7 +410,7 @@ src/neo_relayboard_node.i: src/neo_relayboard_node.cpp.i
 
 # target to preprocess a source file
 src/neo_relayboard_node.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/src/neo_relayboard_node.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/src/neo_relayboard_node.cpp.i
 .PHONY : src/neo_relayboard_node.cpp.i
 
 src/neo_relayboard_node.s: src/neo_relayboard_node.cpp.s
@@ -419,7 +419,7 @@ src/neo_relayboard_node.s: src/neo_relayboard_node.cpp.s
 
 # target to generate assembly for a file
 src/neo_relayboard_node.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/src/neo_relayboard_node.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard_node.dir/src/neo_relayboard_node.cpp.s
 .PHONY : src/neo_relayboard_node.cpp.s
 
 # Help Target

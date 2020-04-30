@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff
+# Install script for directory: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/catkin_generated/installspace/neo_platformctrl_diff.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/catkin_generated/installspace/neo_platformctrl_diff.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_platformctrl_diff/cmake" TYPE FILE FILES
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/catkin_generated/installspace/neo_platformctrl_diffConfig.cmake"
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/catkin_generated/installspace/neo_platformctrl_diffConfig-version.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/catkin_generated/installspace/neo_platformctrl_diffConfig.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/catkin_generated/installspace/neo_platformctrl_diffConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_platformctrl_diff" TYPE FILE FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_platformctrl_diff" TYPE FILE FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

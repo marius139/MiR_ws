@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/progress.marks
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/all
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/progress.marks
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/clean
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,12 +154,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -168,33 +168,33 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule
 
 # Convenience name for target.
-neo_platformctrl_diff_node: Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule
+neo_platformctrl_diff_node: updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/rule
 
 .PHONY : neo_platformctrl_diff_node
 
 # fast build rule for target.
 neo_platformctrl_diff_node/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build
 .PHONY : neo_platformctrl_diff_node/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule
 
 # Convenience name for target.
-neo_platformctrl_diff: Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule
+neo_platformctrl_diff: updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/rule
 
 .PHONY : neo_platformctrl_diff
 
 # fast build rule for target.
 neo_platformctrl_diff/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build
 .PHONY : neo_platformctrl_diff/fast
 
 common/src/DiffDrive2WKinematics.o: common/src/DiffDrive2WKinematics.cpp.o
@@ -203,7 +203,7 @@ common/src/DiffDrive2WKinematics.o: common/src/DiffDrive2WKinematics.cpp.o
 
 # target to build an object file
 common/src/DiffDrive2WKinematics.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/common/src/DiffDrive2WKinematics.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/common/src/DiffDrive2WKinematics.cpp.o
 .PHONY : common/src/DiffDrive2WKinematics.cpp.o
 
 common/src/DiffDrive2WKinematics.i: common/src/DiffDrive2WKinematics.cpp.i
@@ -212,7 +212,7 @@ common/src/DiffDrive2WKinematics.i: common/src/DiffDrive2WKinematics.cpp.i
 
 # target to preprocess a source file
 common/src/DiffDrive2WKinematics.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/common/src/DiffDrive2WKinematics.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/common/src/DiffDrive2WKinematics.cpp.i
 .PHONY : common/src/DiffDrive2WKinematics.cpp.i
 
 common/src/DiffDrive2WKinematics.s: common/src/DiffDrive2WKinematics.cpp.s
@@ -221,7 +221,7 @@ common/src/DiffDrive2WKinematics.s: common/src/DiffDrive2WKinematics.cpp.s
 
 # target to generate assembly for a file
 common/src/DiffDrive2WKinematics.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/common/src/DiffDrive2WKinematics.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff.dir/common/src/DiffDrive2WKinematics.cpp.s
 .PHONY : common/src/DiffDrive2WKinematics.cpp.s
 
 ros/src/neo_platformctrl_node.o: ros/src/neo_platformctrl_node.cpp.o
@@ -230,7 +230,7 @@ ros/src/neo_platformctrl_node.o: ros/src/neo_platformctrl_node.cpp.o
 
 # target to build an object file
 ros/src/neo_platformctrl_node.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/ros/src/neo_platformctrl_node.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/ros/src/neo_platformctrl_node.cpp.o
 .PHONY : ros/src/neo_platformctrl_node.cpp.o
 
 ros/src/neo_platformctrl_node.i: ros/src/neo_platformctrl_node.cpp.i
@@ -239,7 +239,7 @@ ros/src/neo_platformctrl_node.i: ros/src/neo_platformctrl_node.cpp.i
 
 # target to preprocess a source file
 ros/src/neo_platformctrl_node.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/ros/src/neo_platformctrl_node.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/ros/src/neo_platformctrl_node.cpp.i
 .PHONY : ros/src/neo_platformctrl_node.cpp.i
 
 ros/src/neo_platformctrl_node.s: ros/src/neo_platformctrl_node.cpp.s
@@ -248,7 +248,7 @@ ros/src/neo_platformctrl_node.s: ros/src/neo_platformctrl_node.cpp.s
 
 # target to generate assembly for a file
 ros/src/neo_platformctrl_node.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/ros/src/neo_platformctrl_node.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/CMakeFiles/neo_platformctrl_diff_node.dir/ros/src/neo_platformctrl_node.cpp.s
 .PHONY : ros/src/neo_platformctrl_node.cpp.s
 
 # Help Target

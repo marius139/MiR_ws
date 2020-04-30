@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_bringup
+# Install script for directory: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_bringup/catkin_generated/installspace/neo_bringup.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_bringup/catkin_generated/installspace/neo_bringup.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_bringup/cmake" TYPE FILE FILES
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_bringup/catkin_generated/installspace/neo_bringupConfig.cmake"
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_bringup/catkin_generated/installspace/neo_bringupConfig-version.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_bringup/catkin_generated/installspace/neo_bringupConfig.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_bringup/catkin_generated/installspace/neo_bringupConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_bringup" TYPE FILE FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_bringup" TYPE FILE FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_bringup/package.xml")
 endif()
 

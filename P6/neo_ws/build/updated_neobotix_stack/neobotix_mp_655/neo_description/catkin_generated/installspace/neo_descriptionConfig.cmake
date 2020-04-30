@@ -67,7 +67,7 @@ set(neo_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(neo_description_SOURCE_PREFIX /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_description)
+  set(neo_description_SOURCE_PREFIX /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_description)
   set(neo_description_DEVEL_PREFIX /home/ros/neo_ws/devel)
   set(neo_description_INSTALL_PREFIX "")
   set(neo_description_PREFIX ${neo_description_DEVEL_PREFIX})

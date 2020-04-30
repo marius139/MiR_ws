@@ -37,8 +37,6 @@
     <!-- Common parameters -->
     <rosparam file="$(find neo_2dnav)/config/costmap_common.yaml" command="load" ns="local_costmap" />  <!-- Local -->
     <rosparam file="$(find neo_2dnav)/config/costmap_common.yaml" command="load" ns="global_costmap" /> <!-- Global -->
-    <!-- Sensors for the local costmap REMEMBER****> 
-    <rosparam file="$(find neo_2dnav)/config/sensors.yaml" command="load" ns="local_costmap" unless="$(arg sim)"/-->
     <!-- Local and global costmap parameters -->
     <rosparam file="$(find neo_2dnav)/config/costmap_local.yaml" command="load"/>
     <rosparam file="$(find neo_2dnav)/config/costmap_global.yaml" command="load" />

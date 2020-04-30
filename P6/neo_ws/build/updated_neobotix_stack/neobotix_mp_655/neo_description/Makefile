@@ -68,17 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -102,6 +91,16 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -113,15 +112,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/progress.marks
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/all
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/progress.marks
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_description/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/clean
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_description/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,12 +154,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_description/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_description/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -168,169 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule
 
 # Convenience name for target.
-map_msgs_generate_messages_cpp: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : map_msgs_generate_messages_cpp
-
-# fast build rule for target.
-map_msgs_generate_messages_cpp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
-.PHONY : map_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_nodejs: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
-.PHONY : visualization_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_lisp: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : map_msgs_generate_messages_lisp
-
-# fast build rule for target.
-map_msgs_generate_messages_lisp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
-.PHONY : map_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_nodejs: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : map_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-map_msgs_generate_messages_nodejs/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
-.PHONY : map_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_eus.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_eus: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-
-.PHONY : map_msgs_generate_messages_eus
-
-# fast build rule for target.
-map_msgs_generate_messages_eus/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_eus.dir/build
-.PHONY : map_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_py.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_py: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-.PHONY : map_msgs_generate_messages_py
-
-# fast build rule for target.
-map_msgs_generate_messages_py/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_py.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/map_msgs_generate_messages_py.dir/build
-.PHONY : map_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule
-
-# Convenience name for target.
-neo_description_xacro_generated_to_devel_space_: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule
+neo_description_xacro_generated_to_devel_space_: updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/rule
 
 .PHONY : neo_description_xacro_generated_to_devel_space_
 
 # fast build rule for target.
 neo_description_xacro_generated_to_devel_space_/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/neo_description_xacro_generated_to_devel_space_.dir/build
 .PHONY : neo_description_xacro_generated_to_devel_space_/fast
-
-# Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_description/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
 
 # Help Target
 help:
@@ -339,22 +189,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... map_msgs_generate_messages_cpp"
-	@echo "... visualization_msgs_generate_messages_nodejs"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... map_msgs_generate_messages_lisp"
-	@echo "... map_msgs_generate_messages_nodejs"
-	@echo "... edit_cache"
-	@echo "... map_msgs_generate_messages_eus"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... map_msgs_generate_messages_py"
 	@echo "... install/local"
-	@echo "... neo_description_xacro_generated_to_devel_space_"
 	@echo "... test"
-	@echo "... rebuild_cache"
-	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... list_install_components"
+	@echo "... neo_description_xacro_generated_to_devel_space_"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... install"
 .PHONY : help
 

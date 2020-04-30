@@ -49,36 +49,36 @@ CMAKE_SOURCE_DIR = /home/ros/neo_ws/src
 CMAKE_BINARY_DIR = /home/ros/neo_ws/build
 
 # Include any dependencies generated for this target.
-include Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/depend.make
+include updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/depend.make
 
 # Include the progress variables for this target.
-include Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/progress.make
+include updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/flags.make
+include updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/flags.make
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/flags.make
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o -c /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/flags.make
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o"
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o -c /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.i: cmake_force
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.i"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp > CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.i
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp > CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.i
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.s: cmake_force
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.s"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp -o CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.s
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp -o CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.s
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires:
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires:
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires
-	$(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build.make Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides.build
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires
+	$(MAKE) -f updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build.make updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides.build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides.build: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.provides.build: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o
 
 
 # Object files for target scan_unifier_node
@@ -88,8 +88,8 @@ scan_unifier_node_OBJECTS = \
 # External object files for target scan_unifier_node
 scan_unifier_node_EXTERNAL_OBJECTS =
 
-/home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o
-/home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build.make
+/home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o
+/home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build.make
 /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: /opt/ros/melodic/lib/liblaser_geometry.so
 /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: /opt/ros/melodic/lib/libtf2_ros.so
@@ -114,24 +114,24 @@ scan_unifier_node_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/link.txt
+/home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scan_unifier_node.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scan_unifier_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build: /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build: /home/ros/neo_ws/devel/lib/cob_scan_unifier/scan_unifier_node
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/build
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/requires: Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/requires: updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o.requires
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/requires
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/clean:
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && $(CMAKE_COMMAND) -P CMakeFiles/scan_unifier_node.dir/cmake_clean.cmake
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/clean
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/clean:
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier && $(CMAKE_COMMAND) -P CMakeFiles/scan_unifier_node.dir/cmake_clean.cmake
+.PHONY : updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/clean
 
-Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/depend:
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/neo_ws/src /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier /home/ros/neo_ws/build /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/depend
+updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/depend:
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/neo_ws/src /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier /home/ros/neo_ws/build /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/depend
 

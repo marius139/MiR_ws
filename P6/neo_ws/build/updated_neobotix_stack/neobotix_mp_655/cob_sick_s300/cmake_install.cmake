@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300
+# Install script for directory: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/catkin_generated/installspace/cob_sick_s300.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/catkin_generated/installspace/cob_sick_s300.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cob_sick_s300/cmake" TYPE FILE FILES
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/catkin_generated/installspace/cob_sick_s300Config.cmake"
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/catkin_generated/installspace/cob_sick_s300Config-version.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/catkin_generated/installspace/cob_sick_s300Config.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/catkin_generated/installspace/cob_sick_s300Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cob_sick_s300" TYPE FILE FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cob_sick_s300" TYPE FILE FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -93,6 +93,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cob_sick_s300" TYPE DIRECTORY FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/common/include/cob_sick_s300/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cob_sick_s300" TYPE DIRECTORY FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_sick_s300/common/include/cob_sick_s300/")
 endif()
 

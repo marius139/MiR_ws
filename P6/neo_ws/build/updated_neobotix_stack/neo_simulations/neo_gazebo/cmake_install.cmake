@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/neo_ws/src/Updated_neobotix_stack/neo_simulations/neo_gazebo
+# Install script for directory: /home/ros/neo_ws/src/updated_neobotix_stack/neo_simulations/neo_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/Updated_neobotix_stack/neo_simulations/neo_gazebo/catkin_generated/installspace/neo_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/updated_neobotix_stack/neo_simulations/neo_gazebo/catkin_generated/installspace/neo_gazebo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_gazebo/cmake" TYPE FILE FILES
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neo_simulations/neo_gazebo/catkin_generated/installspace/neo_gazeboConfig.cmake"
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neo_simulations/neo_gazebo/catkin_generated/installspace/neo_gazeboConfig-version.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neo_simulations/neo_gazebo/catkin_generated/installspace/neo_gazeboConfig.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neo_simulations/neo_gazebo/catkin_generated/installspace/neo_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_gazebo" TYPE FILE FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neo_simulations/neo_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_gazebo" TYPE FILE FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neo_simulations/neo_gazebo/package.xml")
 endif()
 

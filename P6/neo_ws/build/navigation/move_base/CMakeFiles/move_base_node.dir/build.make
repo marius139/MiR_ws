@@ -100,6 +100,7 @@ move_base_node_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/move_base/move_base: /home/ros/neo_ws/devel/lib/libcostmap_2d.so
 /home/ros/neo_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/ros/neo_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/ros/neo_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/move_base/move_base: /home/ros/neo_ws/devel/lib/libvoxel_grid.so
 /home/ros/neo_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libclass_loader.so
 /home/ros/neo_ws/devel/lib/move_base/move_base: /usr/lib/libPocoFoundation.so

@@ -1,0 +1,8 @@
+prefix=/home/ros/neo_ws/devel
+
+Name: mir_actions
+Description: Description of mir_actions
+Version: 1.0.4
+Cflags: -I/home/ros/neo_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: actionlib geometry_msgs message_runtime nav_msgs

@@ -94,6 +94,7 @@ footprint_tests_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: gtest/googlemock/gtest/libgtest.so
 /home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: /opt/ros/melodic/lib/libclass_loader.so
 /home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: /usr/lib/libPocoFoundation.so
 /home/ros/neo_ws/devel/lib/costmap_2d/footprint_tests: /usr/lib/x86_64-linux-gnu/libdl.so

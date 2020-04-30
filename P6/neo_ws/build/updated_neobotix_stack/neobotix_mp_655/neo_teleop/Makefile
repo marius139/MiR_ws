@@ -137,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/progress.marks
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_teleop/all
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/progress.marks
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_teleop/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/neo_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_teleop/clean
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_teleop/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,12 +154,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_teleop/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_teleop/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_teleop/preinstall
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_teleop/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -168,33 +168,33 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule
 
 # Convenience name for target.
-neo_teleop_keyboard: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule
+neo_teleop_keyboard: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/rule
 
 .PHONY : neo_teleop_keyboard
 
 # fast build rule for target.
 neo_teleop_keyboard/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build
 .PHONY : neo_teleop_keyboard/fast
 
 # Convenience name for target.
-Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule:
-	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule
+updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule:
+	cd /home/ros/neo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule
 
 # Convenience name for target.
-neo_teleop: Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule
+neo_teleop: updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/rule
 
 .PHONY : neo_teleop
 
 # fast build rule for target.
 neo_teleop/fast:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build
 .PHONY : neo_teleop/fast
 
 src/neo_teleop.o: src/neo_teleop.cpp.o
@@ -203,7 +203,7 @@ src/neo_teleop.o: src/neo_teleop.cpp.o
 
 # target to build an object file
 src/neo_teleop.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.o
 .PHONY : src/neo_teleop.cpp.o
 
 src/neo_teleop.i: src/neo_teleop.cpp.i
@@ -212,7 +212,7 @@ src/neo_teleop.i: src/neo_teleop.cpp.i
 
 # target to preprocess a source file
 src/neo_teleop.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.i
 .PHONY : src/neo_teleop.cpp.i
 
 src/neo_teleop.s: src/neo_teleop.cpp.s
@@ -221,7 +221,7 @@ src/neo_teleop.s: src/neo_teleop.cpp.s
 
 # target to generate assembly for a file
 src/neo_teleop.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop.dir/src/neo_teleop.cpp.s
 .PHONY : src/neo_teleop.cpp.s
 
 src/neo_teleop_keyboard.o: src/neo_teleop_keyboard.cpp.o
@@ -230,7 +230,7 @@ src/neo_teleop_keyboard.o: src/neo_teleop_keyboard.cpp.o
 
 # target to build an object file
 src/neo_teleop_keyboard.cpp.o:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/src/neo_teleop_keyboard.cpp.o
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/src/neo_teleop_keyboard.cpp.o
 .PHONY : src/neo_teleop_keyboard.cpp.o
 
 src/neo_teleop_keyboard.i: src/neo_teleop_keyboard.cpp.i
@@ -239,7 +239,7 @@ src/neo_teleop_keyboard.i: src/neo_teleop_keyboard.cpp.i
 
 # target to preprocess a source file
 src/neo_teleop_keyboard.cpp.i:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/src/neo_teleop_keyboard.cpp.i
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/src/neo_teleop_keyboard.cpp.i
 .PHONY : src/neo_teleop_keyboard.cpp.i
 
 src/neo_teleop_keyboard.s: src/neo_teleop_keyboard.cpp.s
@@ -248,7 +248,7 @@ src/neo_teleop_keyboard.s: src/neo_teleop_keyboard.cpp.s
 
 # target to generate assembly for a file
 src/neo_teleop_keyboard.cpp.s:
-	cd /home/ros/neo_ws/build && $(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/src/neo_teleop_keyboard.cpp.s
+	cd /home/ros/neo_ws/build && $(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_teleop/CMakeFiles/neo_teleop_keyboard.dir/src/neo_teleop_keyboard.cpp.s
 .PHONY : src/neo_teleop_keyboard.cpp.s
 
 # Help Target

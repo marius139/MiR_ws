@@ -49,84 +49,84 @@ CMAKE_SOURCE_DIR = /home/ros/neo_ws/src
 CMAKE_BINARY_DIR = /home/ros/neo_ws/build
 
 # Include any dependencies generated for this target.
-include Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/depend.make
+include updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/depend.make
 
 # Include the progress variables for this target.
-include Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/progress.make
+include updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
+include updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o -c /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o"
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o -c /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp > CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp > CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.i
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp -o CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp -o CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.s
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires:
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires:
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires
-	$(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides.build
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires
+	$(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides.build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides.build: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.provides.build: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o
 
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o -c /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o"
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o -c /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp > CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp > CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.i
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp -o CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp -o CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.s
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires:
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires:
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires
-	$(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides.build
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires
+	$(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides.build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides.build: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.provides.build: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o
 
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o -c /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/flags.make
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o"
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o -c /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp > CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp > CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.i
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s: cmake_force
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp -o CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp -o CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.s
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires:
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires:
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires
-	$(MAKE) -f Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides.build
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires
+	$(MAKE) -f updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides.build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides.build: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.provides.build: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o
 
 
 # Object files for target neo_relayboard
@@ -138,31 +138,31 @@ neo_relayboard_OBJECTS = \
 # External object files for target neo_relayboard
 neo_relayboard_EXTERNAL_OBJECTS =
 
-/home/ros/neo_ws/devel/lib/libneo_relayboard.so: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o
-/home/ros/neo_ws/devel/lib/libneo_relayboard.so: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o
-/home/ros/neo_ws/devel/lib/libneo_relayboard.so: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o
-/home/ros/neo_ws/devel/lib/libneo_relayboard.so: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make
+/home/ros/neo_ws/devel/lib/libneo_relayboard.so: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o
+/home/ros/neo_ws/devel/lib/libneo_relayboard.so: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o
+/home/ros/neo_ws/devel/lib/libneo_relayboard.so: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o
+/home/ros/neo_ws/devel/lib/libneo_relayboard.so: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build.make
 /home/ros/neo_ws/devel/lib/libneo_relayboard.so: /home/ros/neo_ws/devel/lib/libSerialIO.so
-/home/ros/neo_ws/devel/lib/libneo_relayboard.so: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/link.txt
+/home/ros/neo_ws/devel/lib/libneo_relayboard.so: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/neo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /home/ros/neo_ws/devel/lib/libneo_relayboard.so"
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neo_relayboard.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neo_relayboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build: /home/ros/neo_ws/devel/lib/libneo_relayboard.so
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build: /home/ros/neo_ws/devel/lib/libneo_relayboard.so
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/build
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires: Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/SerRelayBoard.cpp.o.requires
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/StrUtil.cpp.o.requires
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires: updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/common/src/neo_relayboard_lib.cpp.o.requires
 
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/requires
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/clean:
-	cd /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard && $(CMAKE_COMMAND) -P CMakeFiles/neo_relayboard.dir/cmake_clean.cmake
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/clean
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/clean:
+	cd /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard && $(CMAKE_COMMAND) -P CMakeFiles/neo_relayboard.dir/cmake_clean.cmake
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/clean
 
-Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/depend:
-	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/neo_ws/src /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard /home/ros/neo_ws/build /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard /home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/depend
+updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/depend:
+	cd /home/ros/neo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/neo_ws/src /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard /home/ros/neo_ws/build /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard /home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : updated_neobotix_stack/neobotix_mp_655/neo_relayboard/CMakeFiles/neo_relayboard.dir/depend
 

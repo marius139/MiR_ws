@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/include/cob_scan_unifier/scan_unifier_node.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/include/cob_scan_unifier/scan_unifier_node.h
 pthread.h
 -
 boost/lexical_cast.hpp
@@ -30,7 +30,7 @@ laser_geometry/laser_geometry.h
 sensor_msgs/LaserScan.h
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp
 scan_unifier_node.h
 -
 

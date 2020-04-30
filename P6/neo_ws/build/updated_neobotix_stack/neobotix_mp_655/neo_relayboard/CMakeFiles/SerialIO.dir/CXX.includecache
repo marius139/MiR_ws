@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerialIO.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerialIO.h
 termios.h
 -
 unistd.h
@@ -16,7 +16,7 @@ sys/select.h
 string
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerialIO.cpp
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerialIO.cpp
 ../include/SerialIO.h
 -
 math.h

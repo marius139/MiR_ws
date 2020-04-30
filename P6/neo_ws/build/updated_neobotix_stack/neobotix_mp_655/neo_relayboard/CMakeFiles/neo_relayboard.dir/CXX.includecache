@@ -186,19 +186,19 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/CanMsg.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/CanMsg.h
 iostream
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/CmdRelaisBoard.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/CmdRelaisBoard.h
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/DriveParam.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/DriveParam.h
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/Mutex.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/Mutex.h
 pthread.h
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerRelayBoard.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerRelayBoard.h
 SerialIO.h
 -
 Mutex.h
@@ -216,7 +216,7 @@ vector
 boost/array.hpp
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerialIO.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerialIO.h
 termios.h
 -
 unistd.h
@@ -226,13 +226,13 @@ sys/select.h
 string
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/StrUtil.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/StrUtil.h
 sstream
 -
 iomanip
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/neo_relayboard_node.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/neo_relayboard_node.h
 ros/ros.h
 -
 iostream
@@ -272,7 +272,7 @@ neo_msgs/PowerState.h
 neo_msgs/PowerBoardState.h
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/SerRelayBoard.cpp
 stdio.h
 -
 math.h
@@ -280,15 +280,15 @@ math.h
 ros/ros.h
 -
 ../include/SerRelayBoard.h
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerRelayBoard.h
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include/SerRelayBoard.h
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/StrUtil.cpp
 ../include/StrUtil.h
 -
 algorithm
 -
 
-/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp
+/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/src/neo_relayboard_lib.cpp
 ros/ros.h
 -
 ../include/neo_relayboard_node.h

@@ -119,6 +119,7 @@ dwa_local_planner_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /home/ros/neo_ws/devel/lib/libtrajectory_planner_ros.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /usr/lib/libPocoFoundation.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -156,6 +157,7 @@ dwa_local_planner_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /home/ros/neo_ws/devel/lib/libcostmap_2d.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /home/ros/neo_ws/devel/lib/libvoxel_grid.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/ros/neo_ws/devel/lib/libdwa_local_planner.so: /usr/lib/libPocoFoundation.so

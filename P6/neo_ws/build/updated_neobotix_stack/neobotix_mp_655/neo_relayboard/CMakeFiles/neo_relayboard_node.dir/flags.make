@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"neo_relayboard\"
 
-CXX_INCLUDES = -I/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include -I/home/ros/neo_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_relayboard/common/include -I/home/ros/neo_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

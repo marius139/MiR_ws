@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp" "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o"
+  "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/src/scan_unifier_node.cpp" "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/CMakeFiles/scan_unifier_node.dir/src/scan_unifier_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/include/cob_scan_unifier"
+  "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/include/cob_scan_unifier"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

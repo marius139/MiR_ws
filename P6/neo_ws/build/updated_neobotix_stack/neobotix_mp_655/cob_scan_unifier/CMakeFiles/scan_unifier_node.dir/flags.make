@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"cob_scan_unifier\"
 
-CXX_INCLUDES = -I/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/include/cob_scan_unifier -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/cob_scan_unifier/include/cob_scan_unifier -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
 

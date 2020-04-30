@@ -1,4 +1,4 @@
-# Install script for directory: /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop
+# Install script for directory: /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,32 +38,32 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleop.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleop.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_teleop/cmake" TYPE FILE FILES
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig.cmake"
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig-version.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_teleop" TYPE FILE FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_teleop" TYPE FILE FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleop.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleop.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_teleop/cmake" TYPE FILE FILES
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig.cmake"
-    "/home/ros/neo_ws/build/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig-version.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig.cmake"
+    "/home/ros/neo_ws/build/updated_neobotix_stack/neobotix_mp_655/neo_teleop/catkin_generated/installspace/neo_teleopConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_teleop" TYPE FILE FILES "/home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_teleop/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/neo_teleop" TYPE FILE FILES "/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_teleop/package.xml")
 endif()
 

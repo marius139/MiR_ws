@@ -95,6 +95,7 @@ move_base_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/libmove_base.so: /home/ros/neo_ws/devel/lib/librotate_recovery.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /usr/lib/libPocoFoundation.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -133,6 +134,7 @@ move_base_EXTERNAL_OBJECTS =
 /home/ros/neo_ws/devel/lib/libmove_base.so: /home/ros/neo_ws/devel/lib/libcostmap_2d.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/libtf.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /home/ros/neo_ws/devel/lib/libvoxel_grid.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/ros/neo_ws/devel/lib/libmove_base.so: /usr/lib/libPocoFoundation.so

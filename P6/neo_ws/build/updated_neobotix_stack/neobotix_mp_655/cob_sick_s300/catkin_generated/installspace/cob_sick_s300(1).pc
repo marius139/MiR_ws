@@ -1,0 +1,8 @@
+prefix=/home/ros/neo_ws/install
+
+Name: cob_sick_s300
+Description: Description of cob_sick_s300
+Version: 0.6.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs std_msgs diagnostic_msgs

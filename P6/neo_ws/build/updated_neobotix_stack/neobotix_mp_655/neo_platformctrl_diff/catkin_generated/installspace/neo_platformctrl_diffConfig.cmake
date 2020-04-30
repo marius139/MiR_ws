@@ -67,7 +67,7 @@ set(neo_platformctrl_diff_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(neo_platformctrl_diff_SOURCE_PREFIX /home/ros/neo_ws/src/Updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff)
+  set(neo_platformctrl_diff_SOURCE_PREFIX /home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff)
   set(neo_platformctrl_diff_DEVEL_PREFIX /home/ros/neo_ws/devel)
   set(neo_platformctrl_diff_INSTALL_PREFIX "")
   set(neo_platformctrl_diff_PREFIX ${neo_platformctrl_diff_DEVEL_PREFIX})
