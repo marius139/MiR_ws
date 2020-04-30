@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/devel
-
-Name: social_navigation_layers
-Description: Description of social_navigation_layers
-Version: 0.5.0
-Cflags: -I/home/ros/neo_ws/devel/include -I/home/ros/neo_ws/src/navigation_layers/social_navigation_layers/include
-Libs: -L${prefix}/lib -lsocial_layers
-Requires: angles costmap_2d dynamic_reconfigure geometry_msgs people_msgs pluginlib roscpp

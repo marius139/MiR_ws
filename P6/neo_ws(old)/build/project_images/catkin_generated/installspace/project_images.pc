@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/install
-
-Name: project_images
-Description: Description of project_images
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
