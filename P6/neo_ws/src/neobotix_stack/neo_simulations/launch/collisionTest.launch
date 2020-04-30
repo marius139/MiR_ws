@@ -7,7 +7,7 @@
   <arg name="yaw" default="1.57079633"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find neo_gazebo)/worlds/collisionTestV2.world"/>
+    <arg name="world_name" value="$(find neo_simulations)/worlds/collisionTestV2.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
