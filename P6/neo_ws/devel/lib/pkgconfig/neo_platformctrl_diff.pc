@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/devel
-
-Name: neo_platformctrl_diff
-Description: Description of neo_platformctrl_diff
-Version: 0.1.2
-Cflags: -I/home/ros/neo_ws/src/updated_neobotix_stack/neobotix_mp_655/neo_platformctrl_diff/common/include
-Libs: -L${prefix}/lib -lneo_platformctrl_diff
-Requires: roscpp rostest std_msgs tf sensor_msgs

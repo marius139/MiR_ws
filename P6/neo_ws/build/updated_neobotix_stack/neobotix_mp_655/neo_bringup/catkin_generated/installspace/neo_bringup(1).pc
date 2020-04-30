@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/install
-
-Name: neo_bringup
-Description: Description of neo_bringup
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

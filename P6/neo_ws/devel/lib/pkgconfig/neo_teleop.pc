@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/devel
-
-Name: neo_teleop
-Description: Description of neo_teleop
-Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: geometry_msgs roscpp trajectory_msgs sensor_msgs

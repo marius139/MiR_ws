@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/install
-
-Name: neo_platformctrl_diff
-Description: Description of neo_platformctrl_diff
-Version: 0.1.2
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lneo_platformctrl_diff
-Requires: roscpp rostest std_msgs tf sensor_msgs

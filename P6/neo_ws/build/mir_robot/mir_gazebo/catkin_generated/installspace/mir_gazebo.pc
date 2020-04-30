@@ -1,8 +1,0 @@
-prefix=/home/ros/neo_ws/install
-
-Name: mir_gazebo
-Description: Description of mir_gazebo
-Version: 1.0.4
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
