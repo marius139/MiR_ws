@@ -1,7 +1,0 @@
-image: /home/ros/MiR_ws/src/ragroup-aau_neobotix_stack-eb2dfe29ca9d/neobotix_mp_655/neo_bringup/maps/map_test2.pgm
-resolution: 0.050000
-origin: [-5.000000, -5.000000, 0.000000]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
-
