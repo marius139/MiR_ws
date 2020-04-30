@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>neo_gazebo</name>
+  <name>neo_simulations</name>
   <version>0.0.1</version>
   <description>The neo_gazebo package</description>
 
