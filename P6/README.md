@@ -7,9 +7,13 @@
 - [Important information](#Important-information)
 - [Troubleshooting](#Troubleshooting)
 
+<br>
+
 ## Prerequisites
 - **Ubuntu 18.04 with Melodic ROS distribution** is required for installation of Gazebo 9.1 or higher. Click [here](http://http://releases.ubuntu.com/18.04.4/?_ga=2.30273727.1896459521.1588157994-1099108351.1588060257 "here") for Ubuntu 18.04 installation guide. Click [here](http://http://wiki.ros.org/melodic/Installation/Ubuntu "here") for ROS installation guide for Melodic.
 - **Gazebo 9.1 or higher** is required for collision on actor to work. Click [here](#Installation-of-Gazebo-13)  for installation guide.
+
+<br>
 
 ## Simulation of Navigation Stack (Navigation)
 
@@ -22,7 +26,7 @@ roslaunch neo_gazebo {launch_file_name}
 ```c
     roslaunch neo_2dnav 2dnav.launch
 ```
-
+<br>
 
 ## Simulation of Navigation Stack (SLAM)
 - Launch Gazebo with loaded robot model and world.
@@ -34,7 +38,7 @@ roslaunch neo_gazebo {launch_file_name}
 ```c
     roslaunch neo_2dnav nav2dslam.launch
 ```
-
+<br>
 
 ## Plugin
 The plugin should be installed when downloading the repository. To tell Gazebo where to find the plugin, insert this line to the terminal (with your own workspace path instead of `{ws_path}`) 
@@ -45,7 +49,7 @@ echo 'export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:{ws_path}/actor_collisions/b
 
 Restart the terminal or run this command `. ~/.bashrc` 
 
-
+<br>
 
 ## Installation of Gazebo 13
 1. Open a terminal and type in the following command to setup your computer to accept software from packages.osrfoundation.org.
@@ -78,6 +82,8 @@ This package contains the following external packages:
 - [people_msgs](http://wiki.ros.org/people_msgs)
 
 If you have already installed some of these packages on your system, we recommend uninstalling them from your system and instead use the version in this package. It is also possible to remove the listed packages manually from the P6 package, but there is no guarantee that the package will be "plug and play".
+
+<br>
 
 ## Troubleshooting
 - If `catkin_make` doesn't work!
