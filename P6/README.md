@@ -1,7 +1,11 @@
 #### Table of contents
 - [Prerequisites](#Prerequisites)
-- [Simulation of Navigation Stack](#Simulation-of-navigation-stack-navigation)
-
+- [Simulation of Navigation Stack (Navigation)](#Simulation-of-navigation-stack-navigation)
+- [Simulation of Navigation Stack (SLAM)](#Simulation-of-navigation-stack-SLAM)
+- [Plugin](#Plugin)
+- [Installation of Gazebo 13](#Installation-of-Gazebo-13)
+- [Important information](#Important-information)
+- [Troubleshooting](#Troubleshooting)
 
 ## Prerequisites
 - **Ubuntu 18.04 with Melodic ROS distribution** is required for installation of Gazebo 9.1 or higher. Click [here](http://http://releases.ubuntu.com/18.04.4/?_ga=2.30273727.1896459521.1588157994-1099108351.1588060257 "here") for Ubuntu 18.04 installation guide. Click [here](http://http://wiki.ros.org/melodic/Installation/Ubuntu "here") for ROS installation guide for Melodic.
@@ -65,3 +69,17 @@ sudo apt upgrade
 ```
 <br>
 
+## Important information
+**Beware of duplicates on your system**
+This package contains the following external packages:
+- [ROS navigation stack](http://wiki.ros.org/navigation)
+- [teb_local_planner](http://wiki.ros.org/teb_local_planner)
+- [social_navigation_layers](http://wiki.ros.org/social_navigation_layers)
+- [people_msgs](http://wiki.ros.org/people_msgs)
+
+If you have already installed some of these packages on your system, we recommend uninstalling them from your system and instead use the version in this package. It is also possible to remove the listed packages manually from the P6 package, but there is no guarantee that the package will be "plug and play".
+
+## Troubleshooting
+- If `catkin_make` doesn't work!
+
+In terminal, write `source apt/ros/melodic/setup.bash`
