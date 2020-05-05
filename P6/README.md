@@ -1,7 +1,6 @@
-[TOCM]
-
-[TOC]
-
+#### Table of contents
+- [Prerequisites](#Prerequisites)
+- [Simulation of Navigation Stack](#Simulation-of-navigation-stack---navigation)
 
 ## Prerequisites
 - **Ubuntu 18.04 with Melodic ROS distribution** is required for installation of Gazebo 9.1 or higher. Click [here](http://http://releases.ubuntu.com/18.04.4/?_ga=2.30273727.1896459521.1588157994-1099108351.1588060257 "here") for Ubuntu 18.04 installation guide. Click [here](http://http://wiki.ros.org/melodic/Installation/Ubuntu "here") for ROS installation guide for Melodic.
