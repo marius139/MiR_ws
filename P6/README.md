@@ -88,4 +88,4 @@ If you have already installed some of these packages on your system, we recommen
 ## Troubleshooting
 - If `catkin_make` doesn't work!
 
-In terminal, write `source apt/ros/melodic/setup.bash`
+In terminal, write `source /opt/ros/melodic/setup.bash`
